@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BC1656E1BD26A0800A1556C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1656D1BD26A0800A1556C /* MainMenu.xib */; settings = {ASSET_TAGS = (); }; };
+		2BC165A51BD27D5600A1556C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC165A41BD27D5600A1556C /* DataService.swift */; settings = {ASSET_TAGS = (); }; };
 		CE3E72CC1BD1F0DA00239048 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72CB1BD1F0DA00239048 /* AppDelegate.swift */; };
 		CE3E72CE1BD1F0DA00239048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3E72CD1BD1F0DA00239048 /* Assets.xcassets */; };
 		CE3E72DC1BD1F0DA00239048 /* TinyTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72DB1BD1F0DA00239048 /* TinyTimerTests.swift */; };
@@ -14,7 +16,6 @@
 		CE3E72EC1BD1F1B000239048 /* TimerRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72EB1BD1F1B000239048 /* TimerRunner.swift */; settings = {ASSET_TAGS = (); }; };
 		CE3E72EE1BD1F1BB00239048 /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72ED1BD1F1BB00239048 /* TimerController.swift */; settings = {ASSET_TAGS = (); }; };
 		CE3E72F01BD1F1C500239048 /* ImageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72EF1BD1F1C500239048 /* ImageFactory.swift */; settings = {ASSET_TAGS = (); }; };
-		CE3E72F41BD1FE5700239048 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72F31BD1FE5700239048 /* main.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2BC1656D1BD26A0800A1556C /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		2BC165A41BD27D5600A1556C /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		CE3E72C81BD1F0D900239048 /* TinyTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3E72CB1BD1F0DA00239048 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE3E72CD1BD1F0DA00239048 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,7 +42,6 @@
 		CE3E72EB1BD1F1B000239048 /* TimerRunner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerRunner.swift; sourceTree = "<group>"; };
 		CE3E72ED1BD1F1BB00239048 /* TimerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
 		CE3E72EF1BD1F1C500239048 /* ImageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFactory.swift; sourceTree = "<group>"; };
-		CE3E72F31BD1FE5700239048 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +87,7 @@
 				CE3E72CB1BD1F0DA00239048 /* AppDelegate.swift */,
 				CE3E72CD1BD1F0DA00239048 /* Assets.xcassets */,
 				CE3E72D21BD1F0DA00239048 /* Info.plist */,
-				CE3E72F31BD1FE5700239048 /* main.swift */,
+				2BC1656D1BD26A0800A1556C /* MainMenu.xib */,
 			);
 			path = TinyTimer;
 			sourceTree = "<group>";
@@ -106,6 +108,7 @@
 				CE3E72EB1BD1F1B000239048 /* TimerRunner.swift */,
 				CE3E72ED1BD1F1BB00239048 /* TimerController.swift */,
 				CE3E72EF1BD1F1C500239048 /* ImageFactory.swift */,
+				2BC165A41BD27D5600A1556C /* DataService.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE3E72CE1BD1F0DA00239048 /* Assets.xcassets in Resources */,
+				2BC1656E1BD26A0800A1556C /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,8 +214,8 @@
 			files = (
 				CE3E72F01BD1F1C500239048 /* ImageFactory.swift in Sources */,
 				CE3E72E81BD1F0FB00239048 /* TimeUtils.swift in Sources */,
-				CE3E72F41BD1FE5700239048 /* main.swift in Sources */,
 				CE3E72EE1BD1F1BB00239048 /* TimerController.swift in Sources */,
+				2BC165A51BD27D5600A1556C /* DataService.swift in Sources */,
 				CE3E72EC1BD1F1B000239048 /* TimerRunner.swift in Sources */,
 				CE3E72CC1BD1F0DA00239048 /* AppDelegate.swift in Sources */,
 			);

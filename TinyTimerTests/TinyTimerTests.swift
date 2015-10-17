@@ -24,6 +24,16 @@ class TinyTimerTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertEqual("00:10", TimeUtils.convertTicksToTime(10))
+        XCTAssertEqual("00:20", TimeUtils.convertTicksToTime(20))
+        XCTAssertEqual("00:05", TimeUtils.convertTicksToTime(5))
+        XCTAssertEqual("01:00", TimeUtils.convertTicksToTime(60))
+        XCTAssertEqual("02:00", TimeUtils.convertTicksToTime(120))
+        XCTAssertEqual("01:59", TimeUtils.convertTicksToTime(119))
+        XCTAssertEqual("01:00:00", TimeUtils.convertTicksToTime(1 * 60 * 60))
+        XCTAssertEqual("01:01:00", TimeUtils.convertTicksToTime(1 * 60 * 60 + 60))
+        XCTAssertEqual("02:00:00", TimeUtils.convertTicksToTime(2 * 60 * 60))
+        XCTAssertEqual("04:00:00", TimeUtils.convertTicksToTime(4 * 60 * 60))
     }
     
     func testPerformanceExample() {

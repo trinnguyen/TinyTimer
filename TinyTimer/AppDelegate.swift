@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-
+@NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     var timerController : TimerController!
