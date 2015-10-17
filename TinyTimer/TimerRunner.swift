@@ -9,7 +9,7 @@
 import Cocoa
 
 class TimerRunner: NSObject {
-    var actionUpdateProgress: (progress: String, precent : Float64) -> Void
+    var actionUpdateProgress: (progress: String, precent : Float) -> Void
     var actionFinished: () -> Void
     var seconds : Int
     var cachedSeconds : Int
@@ -25,7 +25,7 @@ class TimerRunner: NSObject {
 //        super.init()
 //    }
     
-    init (actionUpdateProgress : (progress : String, precent : Float64) -> Void, actionFinished : () -> Void, seconds : Int) {
+    init (actionUpdateProgress : (progress : String, precent : Float) -> Void, actionFinished : () -> Void, seconds : Int) {
         self.actionUpdateProgress = actionUpdateProgress
         self.actionFinished = actionFinished
         self.seconds = seconds
@@ -70,7 +70,7 @@ class TimerRunner: NSObject {
     func updateUI()
     {
         let val = TimeUtils.convertTicksToTime(self.seconds);
-        let percent = (Float64)(self.seconds / self.cachedSeconds)
+        let percent = Float(self.seconds) / Float(self.cachedSeconds)
         self.actionUpdateProgress(progress: val, precent:percent)
     }
     func doTick(sender : AnyObject?)

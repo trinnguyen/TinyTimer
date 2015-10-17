@@ -15,7 +15,6 @@
 		CE3E72E81BD1F0FB00239048 /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72E71BD1F0FB00239048 /* TimeUtils.swift */; settings = {ASSET_TAGS = (); }; };
 		CE3E72EC1BD1F1B000239048 /* TimerRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72EB1BD1F1B000239048 /* TimerRunner.swift */; settings = {ASSET_TAGS = (); }; };
 		CE3E72EE1BD1F1BB00239048 /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72ED1BD1F1BB00239048 /* TimerController.swift */; settings = {ASSET_TAGS = (); }; };
-		CE3E72F01BD1F1C500239048 /* ImageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72EF1BD1F1C500239048 /* ImageFactory.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +40,6 @@
 		CE3E72E71BD1F0FB00239048 /* TimeUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeUtils.swift; sourceTree = "<group>"; };
 		CE3E72EB1BD1F1B000239048 /* TimerRunner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerRunner.swift; sourceTree = "<group>"; };
 		CE3E72ED1BD1F1BB00239048 /* TimerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
-		CE3E72EF1BD1F1C500239048 /* ImageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +105,6 @@
 				CE3E72E71BD1F0FB00239048 /* TimeUtils.swift */,
 				CE3E72EB1BD1F1B000239048 /* TimerRunner.swift */,
 				CE3E72ED1BD1F1BB00239048 /* TimerController.swift */,
-				CE3E72EF1BD1F1C500239048 /* ImageFactory.swift */,
 				2BC165A41BD27D5600A1556C /* DataService.swift */,
 			);
 			name = Classes;
@@ -212,7 +209,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE3E72F01BD1F1C500239048 /* ImageFactory.swift in Sources */,
 				CE3E72E81BD1F0FB00239048 /* TimeUtils.swift in Sources */,
 				CE3E72EE1BD1F1BB00239048 /* TimerController.swift in Sources */,
 				2BC165A51BD27D5600A1556C /* DataService.swift in Sources */,
