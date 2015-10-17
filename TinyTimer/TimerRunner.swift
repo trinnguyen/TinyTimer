@@ -50,7 +50,7 @@ class TimerRunner: NSObject {
         self.cachedSeconds = seconds;
         self.seconds = seconds;
         self.timer = NSTimer.init(timeInterval: 1, target: self, selector: Selector("doTick:"), userInfo: nil, repeats: true)
-        NSRunLoop.mainRunLoop().addTimer(self.timer!, forMode: NSDefaultRunLoopMode)
+        NSRunLoop.mainRunLoop().addTimer(self.timer!, forMode: NSRunLoopCommonModes)
         self.isPausing = false
         self.updateUI()
     }
