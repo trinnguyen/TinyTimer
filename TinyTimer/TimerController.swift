@@ -17,7 +17,7 @@ class TimerController: NSObject {
     let startItem : NSMenuItem
     let pauseResumeItem : NSMenuItem
     let stopItem : NSMenuItem
-//    var lastPercent = Float(1);
+    var lastPercent = Float(1);
     
     init(statusItem : NSStatusItem ) {
         
@@ -27,8 +27,8 @@ class TimerController: NSObject {
         //default values
         self.dataService = DataService()
         selectedSeconds = self.dataService.getLatestItem()
-        selectedSeconds = 5
-            
+//        selectedSeconds = 5
+        
 
         //menu
         startItem = NSMenuItem(title: "Start", action: Selector("doStart:"), keyEquivalent: "")
@@ -132,15 +132,14 @@ class TimerController: NSObject {
     func doUpdateProgress(progress : String, percent : Float)
     {
         print("progress: ", progress, percent)
-//        if (self.lastPercent - percent >= 0.027)
-//        {
-//            self.lastPercent = percent
-            let image = TimeUtils.createImage(percent)
-        self.statusItem.button?.image = image
+        if (self.lastPercent - percent >= 0.027 || self.statusItem.button?.image == nil)
+        {
+            self.lastPercent = percent
+            self.statusItem.button?.image = TimeUtils.createImage(percent)
             self.statusItem.button?.imagePosition = NSCellImagePosition.ImageLeft;
-        self.statusItem.button?.bordered = false
+            self.statusItem.button?.bordered = false
             print("\t percent: ", percent)
-//        }
+        }
 
         self.statusItem.button?.title = progress;
     }
@@ -172,7 +171,7 @@ class TimerController: NSObject {
     }
     func doStartTimer(seconds : Int)
     {
-//        self.lastPercent = 1;
+        self.lastPercent = 1;
         self.dataService.setLatestItem(seconds)
         self.timerRunner!.start(seconds)
         updateMenu()
