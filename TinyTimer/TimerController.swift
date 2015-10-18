@@ -132,7 +132,7 @@ class TimerController: NSObject {
     func doUpdateProgress(progress : String, percent : Float)
     {
         print("progress: ", progress, percent)
-        if (self.lastPercent - percent >= 0.027 || self.statusItem.button?.image == nil)
+        if (self.lastPercent - percent >= 0.027 || self.statusItem.button?.image == nil || self.timerRunner?.getStatus() != TimerStatus.Running)
         {
             self.lastPercent = percent
             self.statusItem.button?.image = TimeUtils.createImage(percent)
