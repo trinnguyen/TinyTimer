@@ -110,7 +110,7 @@ class TimerController: NSObject {
     }
     func doAbout(sender: AnyObject?)
     {
-        
+        NSApplication.sharedApplication().orderFrontStandardAboutPanel(sender);
     }
     
     func doStart(sender: AnyObject?)
