@@ -27,7 +27,7 @@ class TimerController: NSObject {
         //default values
         self.dataService = DataService()
         selectedSeconds = self.dataService.getLatestItem()
-//        selectedSeconds = 5
+        selectedSeconds = 10
         
 
         //menu
@@ -138,7 +138,6 @@ class TimerController: NSObject {
             self.statusItem.button?.image = TimeUtils.createImage(percent)
             self.statusItem.button?.imagePosition = NSCellImagePosition.ImageLeft;
             self.statusItem.button?.bordered = false
-            print("\t percent: ", percent)
         }
 
         self.statusItem.button?.title = progress;

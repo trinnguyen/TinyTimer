@@ -52,17 +52,30 @@ class TimeUtils: NSObject {
         NSColor.clearColor().setFill()
         CGContextFillRect(context, drawRect)
         
-        NSColor.blackColor().setFill ()
+        //draw circle border
+        NSColor.blackColor().setFill()
         NSColor.blackColor().setStroke()
         CGContextStrokeEllipseInRect(context, drawRect)
         
         let r = drawRect.size.width / 2
+        let center = NSPoint (x: r + pad, y: r + pad)
+        
+        //draw progress
         let path = NSBezierPath ()
         path.lineWidth = pad
-        let center = NSPoint (x: r + pad, y: r + pad)
-        path.moveToPoint (center)
-        path.appendBezierPathWithArcWithCenter(center, radius: CGFloat(r), startAngle: CGFloat(90), endAngle: CGFloat(90 + percent * 360))
+        
+        path.moveToPoint(NSPoint(x: r + pad, y: r * 2 + pad))
+        path.lineToPoint(center)
+
+        let start = CGFloat((percent) * 360) + CGFloat(90)
+        let end = CGFloat(90)
+
+        path.appendBezierPathWithArcWithCenter(center, radius: CGFloat(r), startAngle: start, endAngle: end)
+        path.closePath()
+        
         path.fill ()
+        path.stroke()
+
         NSGraphicsContext.restoreGraphicsState()
         let image = NSImage (size: imgSize)
         image.addRepresentation (offScreenRep)
