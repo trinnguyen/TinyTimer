@@ -9,7 +9,7 @@
 import Cocoa
 
 class TimerRunner: NSObject {
-    var actionUpdateProgress: (progress: String, precent : Float) -> Void
+    var actionUpdateProgress: (progress: String, precent : Float, force : Bool) -> Void
     var actionFinished: () -> Void
     var seconds : Int
     var cachedSeconds : Int
@@ -25,7 +25,7 @@ class TimerRunner: NSObject {
 //        super.init()
 //    }
     
-    init (actionUpdateProgress : (progress : String, precent : Float) -> Void, actionFinished : () -> Void, seconds : Int) {
+    init (actionUpdateProgress : (progress : String, precent : Float, force : Bool) -> Void, actionFinished : () -> Void, seconds : Int) {
         self.actionUpdateProgress = actionUpdateProgress
         self.actionFinished = actionFinished
         self.seconds = seconds
@@ -52,7 +52,7 @@ class TimerRunner: NSObject {
         self.timer = NSTimer.init(timeInterval: 1, target: self, selector: Selector("doTick:"), userInfo: nil, repeats: true)
         NSRunLoop.mainRunLoop().addTimer(self.timer!, forMode: NSRunLoopCommonModes)
         self.isPausing = false
-        self.updateUI()
+        self.updateUI(true)
     }
     func stop()
     {
@@ -69,9 +69,13 @@ class TimerRunner: NSObject {
     }
     func updateUI()
     {
+        self.updateUI(false)
+    }
+    func updateUI(force : Bool)
+    {
         let val = TimeUtils.convertTicksToTime(self.seconds);
         let percent = Float(self.seconds) / Float(self.cachedSeconds)
-        self.actionUpdateProgress(progress: val, precent:percent)
+        self.actionUpdateProgress(progress: val, precent:percent, force : force)
     }
     func doTick(sender : AnyObject?)
     {

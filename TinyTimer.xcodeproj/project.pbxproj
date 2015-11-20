@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2BC1656E1BD26A0800A1556C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1656D1BD26A0800A1556C /* MainMenu.xib */; settings = {ASSET_TAGS = (); }; };
-		2BC165A51BD27D5600A1556C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC165A41BD27D5600A1556C /* DataService.swift */; settings = {ASSET_TAGS = (); }; };
+		2BC165A51BD27D5600A1556C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC165A41BD27D5600A1556C /* Settings.swift */; settings = {ASSET_TAGS = (); }; };
 		CE3E72CC1BD1F0DA00239048 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72CB1BD1F0DA00239048 /* AppDelegate.swift */; };
 		CE3E72CE1BD1F0DA00239048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3E72CD1BD1F0DA00239048 /* Assets.xcassets */; };
 		CE3E72DC1BD1F0DA00239048 /* TinyTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72DB1BD1F0DA00239048 /* TinyTimerTests.swift */; };
@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		2BC1656D1BD26A0800A1556C /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		2BC165A41BD27D5600A1556C /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		2BC165A41BD27D5600A1556C /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		CE3E72C81BD1F0D900239048 /* TinyTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3E72CB1BD1F0DA00239048 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE3E72CD1BD1F0DA00239048 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 				CE3E72E71BD1F0FB00239048 /* TimeUtils.swift */,
 				CE3E72EB1BD1F1B000239048 /* TimerRunner.swift */,
 				CE3E72ED1BD1F1BB00239048 /* TimerController.swift */,
-				2BC165A41BD27D5600A1556C /* DataService.swift */,
+				2BC165A41BD27D5600A1556C /* Settings.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -212,7 +212,7 @@
 			files = (
 				CE3E72E81BD1F0FB00239048 /* TimeUtils.swift in Sources */,
 				CE3E72EE1BD1F1BB00239048 /* TimerController.swift in Sources */,
-				2BC165A51BD27D5600A1556C /* DataService.swift in Sources */,
+				2BC165A51BD27D5600A1556C /* Settings.swift in Sources */,
 				CE3E72EC1BD1F1B000239048 /* TimerRunner.swift in Sources */,
 				CE3E72CC1BD1F0DA00239048 /* AppDelegate.swift in Sources */,
 			);

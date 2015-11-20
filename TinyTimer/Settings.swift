@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class DataService: NSObject {
+class Settings: NSObject {
     var keyLatest = "kLatestSeconds"
     override init() {
         super.init()
@@ -27,5 +27,13 @@ class DataService: NSObject {
     func setLatestItem(seconds : Int)
     {
         NSUserDefaults.standardUserDefaults().setInteger(seconds, forKey: self.keyLatest)
+    }
+    func getHightlightColor() -> NSColor
+    {
+        return NSColor.blueColor();
+    }
+    func getNormalColor() -> NSColor
+    {
+        return NSColor.blackColor();
     }
 }

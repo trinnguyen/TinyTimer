@@ -24,7 +24,7 @@ class TimeUtils: NSObject {
         }
         return result;
     }
-    static func createImage(percent : Float) -> NSImage
+    static func createImage(percent : Float, highlightColor : NSColor) -> NSImage
     {
         let s = CGFloat(18);
         let imgRect = CGRect (x: 0, y: 0, width: s, height: s);
@@ -53,8 +53,8 @@ class TimeUtils: NSObject {
         CGContextFillRect(context, drawRect)
         
         //draw circle border
-        NSColor.blackColor().setFill()
-        NSColor.blackColor().setStroke()
+        highlightColor.setFill()
+        highlightColor.setStroke()
         CGContextStrokeEllipseInRect(context, drawRect)
         
         let r = drawRect.size.width / 2

@@ -9,7 +9,7 @@
 import Cocoa
 
 class TimerController: NSObject {
-    var dataService : DataService
+    var settings : Settings
     let statusItem : NSStatusItem
     var selectedSeconds : Int
     var timerRunner : TimerRunner?
@@ -25,9 +25,9 @@ class TimerController: NSObject {
         self.timerRunner = nil
         
         //default values
-        self.dataService = DataService()
-        selectedSeconds = self.dataService.getLatestItem()
-        selectedSeconds = 10
+        self.settings = Settings()
+        selectedSeconds = self.settings.getLatestItem()
+//        selectedSeconds = 10
         
 
         //menu
@@ -129,13 +129,18 @@ class TimerController: NSObject {
     }
     
     //Timmer Runner callbacks
-    func doUpdateProgress(progress : String, percent : Float)
+    func doUpdateProgress(progress : String, percent : Float, force : Bool)
     {
         print("progress: ", progress, percent)
-        if (self.lastPercent - percent >= 0.027 || self.statusItem.button?.image == nil || self.timerRunner?.getStatus() != TimerStatus.Running)
+        if (force || (self.lastPercent - percent >= 0.027 || self.statusItem.button?.image == nil || self.timerRunner?.getStatus() != TimerStatus.Running))
         {
+            var color = self.settings.getNormalColor()
+            if (self.timerRunner?.getStatus() == TimerStatus.Running)
+            {
+                color = self.settings.getHightlightColor()
+            }
             self.lastPercent = percent
-            self.statusItem.button?.image = TimeUtils.createImage(percent)
+            self.statusItem.button?.image = TimeUtils.createImage(percent, highlightColor: color)
             self.statusItem.button?.imagePosition = NSCellImagePosition.ImageLeft;
             self.statusItem.button?.bordered = false
         }
@@ -147,7 +152,7 @@ class TimerController: NSObject {
         //update menu
         self.updateMenu()
         
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.5 * Double(NSEC_PER_SEC)))
         dispatch_after(delayTime, dispatch_get_main_queue()) {
             let noti = NSUserNotification()
             noti.title = "Please stop! Time is up."
@@ -171,7 +176,7 @@ class TimerController: NSObject {
     func doStartTimer(seconds : Int)
     {
         self.lastPercent = 1;
-        self.dataService.setLatestItem(seconds)
+        self.settings.setLatestItem(seconds)
         self.timerRunner!.start(seconds)
         updateMenu()
     }
