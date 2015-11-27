@@ -28,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2BAE2B2B1C02FA9B009A61D3 /* TinyTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TinyTimer.entitlements; sourceTree = "<group>"; };
 		2BC1656D1BD26A0800A1556C /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		2BC165A41BD27D5600A1556C /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		CE3E72C81BD1F0D900239048 /* TinyTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +82,7 @@
 		CE3E72CA1BD1F0D900239048 /* TinyTimer */ = {
 			isa = PBXGroup;
 			children = (
+				2BAE2B2B1C02FA9B009A61D3 /* TinyTimer.entitlements */,
 				CE3E72E61BD1F0E500239048 /* Classes */,
 				CE3E72CB1BD1F0DA00239048 /* AppDelegate.swift */,
 				CE3E72CD1BD1F0DA00239048 /* Assets.xcassets */,
@@ -160,6 +162,11 @@
 					CE3E72C71BD1F0D900239048 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = TJ7NJK267F;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					CE3E72D61BD1F0DA00239048 = {
 						CreatedOnToolsVersion = 7.0;
@@ -321,6 +328,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TinyTimer/TinyTimer.entitlements;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = TinyTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -333,6 +342,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TinyTimer/TinyTimer.entitlements;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = TinyTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
