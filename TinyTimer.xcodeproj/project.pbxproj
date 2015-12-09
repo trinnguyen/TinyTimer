@@ -10,6 +10,8 @@
 		2BC1656E1BD26A0800A1556C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1656D1BD26A0800A1556C /* MainMenu.xib */; settings = {ASSET_TAGS = (); }; };
 		2BC165A51BD27D5600A1556C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC165A41BD27D5600A1556C /* Settings.swift */; settings = {ASSET_TAGS = (); }; };
 		2BE267251C182EAE006C338B /* Builds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE267241C182EAE006C338B /* Builds.swift */; settings = {ASSET_TAGS = (); }; };
+		2BE267291C183E32006C338B /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE267271C183E32006C338B /* Fabric.framework */; settings = {ASSET_TAGS = (); }; };
+		2BE2672A1C183E32006C338B /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE267281C183E32006C338B /* Crashlytics.framework */; settings = {ASSET_TAGS = (); }; };
 		CE3E72CC1BD1F0DA00239048 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72CB1BD1F0DA00239048 /* AppDelegate.swift */; };
 		CE3E72CE1BD1F0DA00239048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3E72CD1BD1F0DA00239048 /* Assets.xcassets */; };
 		CE3E72DC1BD1F0DA00239048 /* TinyTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72DB1BD1F0DA00239048 /* TinyTimerTests.swift */; };
@@ -33,6 +35,8 @@
 		2BC1656D1BD26A0800A1556C /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		2BC165A41BD27D5600A1556C /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		2BE267241C182EAE006C338B /* Builds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builds.swift; sourceTree = "<group>"; };
+		2BE267271C183E32006C338B /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		2BE267281C183E32006C338B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		CE3E72C81BD1F0D900239048 /* TinyTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3E72CB1BD1F0DA00239048 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE3E72CD1BD1F0DA00239048 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BE2672A1C183E32006C338B /* Crashlytics.framework in Frameworks */,
+				2BE267291C183E32006C338B /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +72,8 @@
 		CE3E72BF1BD1F0D900239048 = {
 			isa = PBXGroup;
 			children = (
+				2BE267271C183E32006C338B /* Fabric.framework */,
+				2BE267281C183E32006C338B /* Crashlytics.framework */,
 				CE3E72CA1BD1F0D900239048 /* TinyTimer */,
 				CE3E72DA1BD1F0DA00239048 /* TinyTimerTests */,
 				CE3E72C91BD1F0D900239048 /* Products */,
@@ -125,6 +133,7 @@
 				CE3E72C41BD1F0D900239048 /* Sources */,
 				CE3E72C51BD1F0D900239048 /* Frameworks */,
 				CE3E72C61BD1F0D900239048 /* Resources */,
+				2BE267261C183E17006C338B /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -214,6 +223,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BE267261C183E17006C338B /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run f709fd37623605868076f99c71686e3a19777ba8 cc1708e78f8761fe416c2ab364acf9421b9f8961128709c0dd176d96dd3209b7";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE3E72C41BD1F0D900239048 /* Sources */ = {
@@ -335,6 +361,10 @@
 				CODE_SIGN_ENTITLEMENTS = TinyTimer/TinyTimer.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TinyTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.trinnguyen.TinyTimer;
@@ -349,6 +379,10 @@
 				CODE_SIGN_ENTITLEMENTS = TinyTimer/TinyTimer.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TinyTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.trinnguyen.TinyTimer;

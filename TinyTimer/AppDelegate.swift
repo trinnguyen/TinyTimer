@@ -7,13 +7,19 @@
 //
 
 import Cocoa
+import Fabric
+import Crashlytics
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     var timerController : TimerController!
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+        //track crash
+        Fabric.with([Crashlytics.self])
+
+        //default controller
         let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
         timerController = TimerController(statusItem: statusItem)
     }

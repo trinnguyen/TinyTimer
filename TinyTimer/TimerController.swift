@@ -109,7 +109,7 @@ class TimerController: NSObject {
     }
     func doCustom(sender: AnyObject?)
     {
-        
+
     }
     func doAbout(sender: AnyObject?)
     {
