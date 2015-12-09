@@ -17,6 +17,7 @@ class TimerController: NSObject {
     let startItem : NSMenuItem
     let pauseResumeItem : NSMenuItem
     let stopItem : NSMenuItem
+    let customItem : NSMenuItem
     var lastPercent = Float(1);
     
     init(statusItem : NSStatusItem ) {
@@ -32,6 +33,7 @@ class TimerController: NSObject {
         startItem = NSMenuItem(title: "Start", action: Selector("doStart:"), keyEquivalent: "")
         pauseResumeItem = NSMenuItem(title: "Pause", action: Selector("doPause:"), keyEquivalent: "")
         stopItem = NSMenuItem(title: "Stop", action: Selector("doStop:"), keyEquivalent: "")
+        customItem = NSMenuItem(title: "Custom", action: Selector("doCustom:"), keyEquivalent: "")
         
         super.init()
         //init menu
@@ -74,10 +76,9 @@ class TimerController: NSObject {
         menu.addItem(t1Item)
         menu.addItem(t2Item)
         menu.addItem(t3Item)
+        menu.addItem(customItem)
         menu.addItem(NSMenuItem.separatorItem())
-//        menu.addItem(perferenceItem)
         menu.addItem(aboutItem)
-//        menu.addItem(NSMenuItem.separatorItem())
         menu.addItem(quitItem)
         statusItem.menu = menu
         
@@ -106,9 +107,13 @@ class TimerController: NSObject {
     {
         doStartTimer(4 * 60 * 60)
     }
+    func doCustom(sender: AnyObject?)
+    {
+        
+    }
     func doAbout(sender: AnyObject?)
     {
-        NSApplication.sharedApplication().orderFrontStandardAboutPanel(sender);
+        NSApplication.sharedApplication().orderFrontStandardAboutPanel(NSApplication.sharedApplication());
     }
     
     func doStart(sender: AnyObject?)
