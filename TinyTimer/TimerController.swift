@@ -26,9 +26,7 @@ class TimerController: NSObject {
         
         //default values
         self.settings = Settings()
-        selectedSeconds = self.settings.getLatestItem()
-//        selectedSeconds = 10
-        
+        selectedSeconds = self.settings.getLatestItem(Builds.defaultTimers)
 
         //menu
         startItem = NSMenuItem(title: "Start", action: Selector("doStart:"), keyEquivalent: "")
@@ -131,13 +129,12 @@ class TimerController: NSObject {
     //Timmer Runner callbacks
     func doUpdateProgress(progress : String, percent : Float, force : Bool)
     {
-        print("progress: ", progress, percent)
         if (force || (self.lastPercent - percent >= 0.027 || self.statusItem.button?.image == nil || self.timerRunner?.getStatus() != TimerStatus.Running))
         {
-            var color = self.settings.getNormalColor()
+            var color = Builds.normalColor
             if (self.timerRunner?.getStatus() == TimerStatus.Running)
             {
-                color = self.settings.getHightlightColor()
+                color = Builds.highlightColor
             }
             self.lastPercent = percent
             self.statusItem.button?.image = TimeUtils.createImage(percent, highlightColor: color)
@@ -159,7 +156,6 @@ class TimerController: NSObject {
             noti.informativeText = "It's time for a coffee break"
             noti.soundName = NSUserNotificationDefaultSoundName
             NSUserNotificationCenter.defaultUserNotificationCenter().deliverNotification(noti)
-            print("did show notification")
         }
     }
     

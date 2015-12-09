@@ -18,13 +18,6 @@ class TimerRunner: NSObject {
     
     var isPausing : Bool
     
-//    override init() {
-//        self.actionUpdateProgress = Void
-//        self.actionFinished = Void
-//        seconds = 0
-//        super.init()
-//    }
-    
     init (actionUpdateProgress : (progress : String, precent : Float, force : Bool) -> Void, actionFinished : () -> Void, seconds : Int) {
         self.actionUpdateProgress = actionUpdateProgress
         self.actionFinished = actionFinished

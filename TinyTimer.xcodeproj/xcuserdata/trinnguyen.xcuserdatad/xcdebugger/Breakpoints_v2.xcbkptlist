@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TinyTimer/TimerController.swift"
-            timestampString = "466785378.228013"
+            timestampString = "471347341.704784"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "doCustom0(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TinyTimer/TimerController.swift"
-            timestampString = "466785378.228013"
+            timestampString = "471347341.704784"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "init(statusItem:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -143,7 +143,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
             endingLineNumber = "52"
-            landmarkName = "createImage(_:)"
+            landmarkName = "createImage(_:highlightColor:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -159,7 +159,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "74"
             endingLineNumber = "74"
-            landmarkName = "createImage(_:)"
+            landmarkName = "createImage(_:highlightColor:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TinyTimer/TimerController.swift"
-            timestampString = "466785638.548113"
+            timestampString = "471347341.704784"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "doStop(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TinyTimer/TimerRunner.swift"
-            timestampString = "469689960.597982"
+            timestampString = "471347341.704784"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "updateUI(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -207,7 +207,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
             endingLineNumber = "42"
-            landmarkName = "createImage(_:)"
+            landmarkName = "createImage(_:highlightColor:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -223,7 +223,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "72"
             endingLineNumber = "72"
-            landmarkName = "createImage(_:)"
+            landmarkName = "createImage(_:highlightColor:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -234,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TinyTimer/TimerController.swift"
-            timestampString = "469687176.590634"
+            timestampString = "471347341.704784"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "doAbout(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TinyTimer/TimerController.swift"
-            timestampString = "469689648.517479"
+            timestampString = "471348463.734822"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "doUpdateProgress(_:percent:force:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TinyTimer/TimerController.swift"
-            timestampString = "469689682.086999"
+            timestampString = "471348463.734822"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "doUpdateProgress(_:percent:force:)"
             landmarkType = "5">
          </BreakpointContent>

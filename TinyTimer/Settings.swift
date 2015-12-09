@@ -15,25 +15,17 @@ class Settings: NSObject {
         
         //load preferences
     }
-    func getLatestItem() -> Int
+    func getLatestItem(defaultSeconds: Int) -> Int
     {
-        var seconds = NSUserDefaults.standardUserDefaults().integerForKey(self.keyLatest)
+        let seconds = NSUserDefaults.standardUserDefaults().integerForKey(self.keyLatest)
         if (seconds <= 0)
         {
-            seconds = 60 * 30;
+            return defaultSeconds
         }
-        return seconds;
+        return seconds
     }
     func setLatestItem(seconds : Int)
     {
         NSUserDefaults.standardUserDefaults().setInteger(seconds, forKey: self.keyLatest)
-    }
-    func getHightlightColor() -> NSColor
-    {
-        return NSColor.blueColor();
-    }
-    func getNormalColor() -> NSColor
-    {
-        return NSColor.blackColor();
     }
 }
