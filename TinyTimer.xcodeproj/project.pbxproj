@@ -12,6 +12,10 @@
 		2BE267251C182EAE006C338B /* Builds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE267241C182EAE006C338B /* Builds.swift */; settings = {ASSET_TAGS = (); }; };
 		2BE267291C183E32006C338B /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE267271C183E32006C338B /* Fabric.framework */; settings = {ASSET_TAGS = (); }; };
 		2BE2672A1C183E32006C338B /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE267281C183E32006C338B /* Crashlytics.framework */; settings = {ASSET_TAGS = (); }; };
+		2BE2672C1C1842C1006C338B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2672B1C1842C1006C338B /* Credits.rtf */; settings = {ASSET_TAGS = (); }; };
+		2BE2672F1C184C29006C338B /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE2672D1C184C29006C338B /* InputViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		2BE267301C184C29006C338B /* InputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2672E1C184C29006C338B /* InputViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		2BE2673B1C188F0C006C338B /* icon_64@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2673A1C188F0C006C338B /* icon_64@2x.png */; settings = {ASSET_TAGS = (); }; };
 		CE3E72CC1BD1F0DA00239048 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72CB1BD1F0DA00239048 /* AppDelegate.swift */; };
 		CE3E72CE1BD1F0DA00239048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3E72CD1BD1F0DA00239048 /* Assets.xcassets */; };
 		CE3E72DC1BD1F0DA00239048 /* TinyTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72DB1BD1F0DA00239048 /* TinyTimerTests.swift */; };
@@ -37,6 +41,10 @@
 		2BE267241C182EAE006C338B /* Builds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builds.swift; sourceTree = "<group>"; };
 		2BE267271C183E32006C338B /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		2BE267281C183E32006C338B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		2BE2672B1C1842C1006C338B /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = Credits.rtf; path = ../Credits.rtf; sourceTree = "<group>"; };
+		2BE2672D1C184C29006C338B /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		2BE2672E1C184C29006C338B /* InputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputViewController.xib; sourceTree = "<group>"; };
+		2BE2673A1C188F0C006C338B /* icon_64@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_64@2x.png"; sourceTree = "<group>"; };
 		CE3E72C81BD1F0D900239048 /* TinyTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3E72CB1BD1F0DA00239048 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE3E72CD1BD1F0DA00239048 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BE267311C187CBC006C338B /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				2BE2672D1C184C29006C338B /* InputViewController.swift */,
+				2BE2672E1C184C29006C338B /* InputViewController.xib */,
+			);
+			name = Input;
+			sourceTree = "<group>";
+		};
 		CE3E72BF1BD1F0D900239048 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +109,8 @@
 		CE3E72CA1BD1F0D900239048 /* TinyTimer */ = {
 			isa = PBXGroup;
 			children = (
+				2BE2673A1C188F0C006C338B /* icon_64@2x.png */,
+				2BE2672B1C1842C1006C338B /* Credits.rtf */,
 				2BAE2B2B1C02FA9B009A61D3 /* TinyTimer.entitlements */,
 				CE3E72E61BD1F0E500239048 /* Classes */,
 				CE3E72CB1BD1F0DA00239048 /* AppDelegate.swift */,
@@ -115,6 +134,7 @@
 		CE3E72E61BD1F0E500239048 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2BE267311C187CBC006C338B /* Input */,
 				CE3E72E71BD1F0FB00239048 /* TimeUtils.swift */,
 				CE3E72EB1BD1F1B000239048 /* TimerRunner.swift */,
 				CE3E72ED1BD1F1BB00239048 /* TimerController.swift */,
@@ -210,8 +230,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BE2673B1C188F0C006C338B /* icon_64@2x.png in Resources */,
 				CE3E72CE1BD1F0DA00239048 /* Assets.xcassets in Resources */,
+				2BE2672C1C1842C1006C338B /* Credits.rtf in Resources */,
 				2BC1656E1BD26A0800A1556C /* MainMenu.xib in Resources */,
+				2BE267301C184C29006C338B /* InputViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +272,7 @@
 				CE3E72E81BD1F0FB00239048 /* TimeUtils.swift in Sources */,
 				CE3E72EE1BD1F1BB00239048 /* TimerController.swift in Sources */,
 				2BE267251C182EAE006C338B /* Builds.swift in Sources */,
+				2BE2672F1C184C29006C338B /* InputViewController.swift in Sources */,
 				2BC165A51BD27D5600A1556C /* Settings.swift in Sources */,
 				CE3E72EC1BD1F1B000239048 /* TimerRunner.swift in Sources */,
 				CE3E72CC1BD1F0DA00239048 /* AppDelegate.swift in Sources */,

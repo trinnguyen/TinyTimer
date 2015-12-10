@@ -19,6 +19,8 @@ class TimerController: NSObject {
     let stopItem : NSMenuItem
     let customItem : NSMenuItem
     var lastPercent = Float(1);
+    let popOver : NSPopover
+    var inputViewController : InputViewController?
     
     init(statusItem : NSStatusItem ) {
         
@@ -33,7 +35,11 @@ class TimerController: NSObject {
         startItem = NSMenuItem(title: "Start", action: Selector("doStart:"), keyEquivalent: "")
         pauseResumeItem = NSMenuItem(title: "Pause", action: Selector("doPause:"), keyEquivalent: "")
         stopItem = NSMenuItem(title: "Stop", action: Selector("doStop:"), keyEquivalent: "")
-        customItem = NSMenuItem(title: "Custom", action: Selector("doCustom:"), keyEquivalent: "")
+        customItem = NSMenuItem(title: "Custom...", action: Selector("doCustom:"), keyEquivalent: "")
+        
+        //popOver
+        popOver = NSPopover()
+        popOver.behavior = NSPopoverBehavior.Transient
         
         super.init()
         //init menu
@@ -109,11 +115,21 @@ class TimerController: NSObject {
     }
     func doCustom(sender: AnyObject?)
     {
-
+        if (self.inputViewController == nil)    {
+            self.inputViewController = InputViewController(nibName: "InputViewController", bundle: nil)
+            self.inputViewController?.actionStart = doCustomStart;
+            self.inputViewController?.actionClose = doCustomClose;
+            self.popOver.contentViewController = self.inputViewController
+        }
+        if let button = statusItem.button {
+            self.inputViewController!.selectedSeconds = self.selectedSeconds
+            self.popOver.showRelativeToRect(button.bounds, ofView: button, preferredEdge: NSRectEdge.MinY)
+        }
     }
     func doAbout(sender: AnyObject?)
     {
-        NSApplication.sharedApplication().orderFrontStandardAboutPanel(NSApplication.sharedApplication());
+        NSApplication.sharedApplication().orderFrontStandardAboutPanel(NSApplication.sharedApplication())
+        NSApplication.sharedApplication().activateIgnoringOtherApps(true)
     }
     
     func doStart(sender: AnyObject?)
@@ -176,9 +192,20 @@ class TimerController: NSObject {
     }
     func doStartTimer(seconds : Int)
     {
+        self.selectedSeconds = seconds
         self.lastPercent = 1;
-        self.settings.setLatestItem(seconds)
-        self.timerRunner!.start(seconds)
+        self.settings.setLatestItem(self.selectedSeconds)
+        self.timerRunner!.start(self.selectedSeconds)
         updateMenu()
+    }
+    //Custom Popover
+    func doCustomStart(seconds : Int)
+    {
+        doStartTimer(seconds)
+        doCustomClose()
+    }
+    func doCustomClose()
+    {
+        self.popOver.close()
     }
 }
