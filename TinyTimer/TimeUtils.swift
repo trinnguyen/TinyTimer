@@ -36,12 +36,17 @@ class TimeUtils: NSObject {
             }
             if seconds > 0  {
                 var fmt = ""
-                if minutes > 1  {
+                if seconds > 1  {
                     fmt = "%@%d seconds"
                 }   else    {
                     fmt = "%@%d second"
                 }
-                result = String(format: fmt, result, minutes)
+                result = String(format: fmt, result, seconds)
+            }
+            if result.characters.count > 0  {
+                if result.characters.last! == " "       {
+                    result = String(result.characters.dropLast())
+                }
             }
         }   else    {
             result = "0 second"
