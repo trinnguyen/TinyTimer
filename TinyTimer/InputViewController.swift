@@ -30,6 +30,10 @@ class InputViewController: NSViewController {
         super.viewDidLoad()
         // Do view setup here.
         self.btnStart.keyEquivalent = "\r"
+        
+        //set to GB
+        let locale = NSLocale(localeIdentifier: "en_GB")
+        self.datePicker.locale = locale
     }
     override func viewWillAppear() {
         //update data here
