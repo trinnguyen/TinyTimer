@@ -10,22 +10,41 @@ import Cocoa
 
 class Settings: NSObject {
     var keyLatest = "kLatestSeconds"
+    var keyCustom = "kCustomsSeconds"
     override init() {
         super.init()
-        
-        //load preferences
     }
-    func getLatestItem(defaultSeconds: Int) -> Int
+
+    func getCustomItem() -> Int
     {
-        let seconds = NSUserDefaults.standardUserDefaults().integerForKey(self.keyLatest)
-        if (seconds <= 0)
-        {
-            return defaultSeconds
-        }
-        return seconds
+        return get(self.keyCustom)
+    }
+    func setLatestCustom(seconds : Int)
+    {
+        update(seconds, key: self.keyCustom)
+    }
+    func getLatestItem() -> Int
+    {
+        return get(self.keyLatest)
     }
     func setLatestItem(seconds : Int)
     {
-        NSUserDefaults.standardUserDefaults().setInteger(seconds, forKey: self.keyLatest)
+        update(seconds, key: self.keyLatest)
+    }
+    
+    // Internal functions
+    
+    func get(key : String) -> Int
+    {
+        let seconds = NSUserDefaults.standardUserDefaults().integerForKey(key)
+        if (seconds <= 0)
+        {
+            return Builds.defaultTimers
+        }
+        return seconds
+    }
+    func update(seconds : Int, key : String)
+    {
+        NSUserDefaults.standardUserDefaults().setInteger(seconds, forKey: key)
     }
 }

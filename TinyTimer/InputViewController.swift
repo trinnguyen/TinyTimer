@@ -29,7 +29,6 @@ class InputViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        
     }
     override func viewWillAppear() {
         //update data here
@@ -54,6 +53,9 @@ class InputViewController: NSViewController {
     
     @IBAction func handleStartTouched(sender: AnyObject) {
         doFinish()
+    }
+    @IBAction func handleDatePickerAction(sender: AnyObject) {
+        self.btnStart.becomeFirstResponder()
     }
     func doFinish() {
         //start timer

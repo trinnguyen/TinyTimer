@@ -66,6 +66,9 @@ Gw
                         <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <datePickerElements key="datePickerElements" hour="YES" minute="YES" second="YES"/>
                     </datePickerCell>
+                    <connections>
+                        <action selector="handleDatePickerAction:" target="-2" id="M2E-GG-rFQ"/>
+                    </connections>
                 </datePicker>
             </subviews>
             <constraints>

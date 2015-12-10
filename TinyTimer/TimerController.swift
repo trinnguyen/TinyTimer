@@ -12,12 +12,14 @@ class TimerController: NSObject {
     var settings : Settings
     let statusItem : NSStatusItem
     var selectedSeconds : Int
+    var customSeconds : Int
     var timerRunner : TimerRunner?
     
     let startItem : NSMenuItem
     let pauseResumeItem : NSMenuItem
     let stopItem : NSMenuItem
     let customItem : NSMenuItem
+    let cachedCustomItem : NSMenuItem
     var lastPercent = Float(1);
     let popOver : NSPopover
     var inputViewController : InputViewController?
@@ -29,13 +31,15 @@ class TimerController: NSObject {
         
         //default values
         self.settings = Settings()
-        selectedSeconds = self.settings.getLatestItem(Builds.defaultTimers)
+        selectedSeconds = self.settings.getLatestItem()
+        customSeconds = self.settings.getCustomItem()
 
         //menu
         startItem = NSMenuItem(title: "Start", action: Selector("doStart:"), keyEquivalent: "")
         pauseResumeItem = NSMenuItem(title: "Pause", action: Selector("doPause:"), keyEquivalent: "")
         stopItem = NSMenuItem(title: "Stop", action: Selector("doStop:"), keyEquivalent: "")
         customItem = NSMenuItem(title: "Custom...", action: Selector("doCustom:"), keyEquivalent: "")
+        cachedCustomItem = NSMenuItem(title: "", action: Selector("doCustom0:"), keyEquivalent: "")
         
         //popOver
         popOver = NSPopover()
@@ -56,17 +60,13 @@ class TimerController: NSObject {
     }
     func initMenuItems()
     {
-        //Control Items
-
-        
+        self.cachedCustomItem.title = self.toMenuString(self.customSeconds)
         //Suggested Time Items
-        let t0Item = NSMenuItem(title: "30 minutes", action: Selector("doCustom0:"), keyEquivalent: "")
         let t1Item = NSMenuItem(title: "1 hour", action: Selector("doCustom1:"), keyEquivalent: "")
         let t2Item = NSMenuItem(title: "2 hours", action: Selector("doCustom2:"), keyEquivalent: "")
         let t3Item = NSMenuItem(title: "4 hours", action: Selector("doCustom3:"), keyEquivalent: "")
         
         //Preferences Items
-//        let perferenceItem = NSMenuItem(title: "Preferences", action: Selector("doPreferences:"), keyEquivalent: "")
         let aboutItem = NSMenuItem(title: "About", action: Selector("doAbout:"), keyEquivalent: "")
         
         //Quit Items
@@ -78,7 +78,7 @@ class TimerController: NSObject {
         menu.addItem(pauseResumeItem)
         menu.addItem(stopItem)
         menu.addItem(NSMenuItem.separatorItem())
-        menu.addItem(t0Item)
+        menu.addItem(cachedCustomItem)
         menu.addItem(t1Item)
         menu.addItem(t2Item)
         menu.addItem(t3Item)
@@ -99,7 +99,7 @@ class TimerController: NSObject {
     }
     func doCustom0(sender: AnyObject?)
     {
-        doStartTimer(30 * 60)
+        doStartTimer(self.customSeconds)
     }
     func doCustom1(sender: AnyObject?)
     {
@@ -180,9 +180,25 @@ class TimerController: NSObject {
         }
     }
     
+    //Custom Popover
+    func doCustomStart(seconds : Int)   {
+        doStartTimer(seconds)
+        doCustomClose()
+        self.updateCustomValue(seconds)
+    }
+    func doCustomClose()    {
+        self.popOver.close()
+    }
+    func updateCustomValue(seconds : Int)  {
+        //reload
+        self.customSeconds = seconds
+        self.cachedCustomItem.title = self.toMenuString(self.customSeconds)
+        //save
+        self.settings.setLatestCustom(self.customSeconds)
+    }
+    
     //intenal actions
-    func updateMenu()
-    {
+    func updateMenu()   {
         let status = self.timerRunner?.getStatus();
         
         startItem.enabled = status == TimerStatus.Stopped
@@ -190,22 +206,14 @@ class TimerController: NSObject {
         pauseResumeItem.title = (status == TimerStatus.Paused) ? "Resume" : "Pause"
         stopItem.enabled = status != TimerStatus.Stopped;
     }
-    func doStartTimer(seconds : Int)
-    {
+    func doStartTimer(seconds : Int)    {
         self.selectedSeconds = seconds
         self.lastPercent = 1;
         self.settings.setLatestItem(self.selectedSeconds)
         self.timerRunner!.start(self.selectedSeconds)
         updateMenu()
     }
-    //Custom Popover
-    func doCustomStart(seconds : Int)
-    {
-        doStartTimer(seconds)
-        doCustomClose()
-    }
-    func doCustomClose()
-    {
-        self.popOver.close()
+    func toMenuString(seconds: Int) -> String   {
+        return TimeUtils.convertTicksToMenu(seconds)
     }
 }
