@@ -29,6 +29,7 @@ class InputViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        self.btnStart.keyEquivalent = "\r"
     }
     override func viewWillAppear() {
         //update data here
