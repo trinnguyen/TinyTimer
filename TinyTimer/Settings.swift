@@ -10,30 +10,41 @@ import Cocoa
 
 class Settings: NSObject {
     var keyLatest = "kLatestSeconds"
+    var keyCustom = "kCustomsSeconds"
     override init() {
         super.init()
-        
-        //load preferences
+    }
+
+    func getCustomItem() -> Int
+    {
+        return get(self.keyCustom)
+    }
+    func setLatestCustom(seconds : Int)
+    {
+        update(seconds, key: self.keyCustom)
     }
     func getLatestItem() -> Int
     {
-        var seconds = NSUserDefaults.standardUserDefaults().integerForKey(self.keyLatest)
-        if (seconds <= 0)
-        {
-            seconds = 60 * 30;
-        }
-        return seconds;
+        return get(self.keyLatest)
     }
     func setLatestItem(seconds : Int)
     {
-        NSUserDefaults.standardUserDefaults().setInteger(seconds, forKey: self.keyLatest)
+        update(seconds, key: self.keyLatest)
     }
-    func getHightlightColor() -> NSColor
+    
+    // Internal functions
+    
+    func get(key : String) -> Int
     {
-        return NSColor.blueColor();
+        let seconds = NSUserDefaults.standardUserDefaults().integerForKey(key)
+        if (seconds <= 0)
+        {
+            return Builds.defaultTimers
+        }
+        return seconds
     }
-    func getNormalColor() -> NSColor
+    func update(seconds : Int, key : String)
     {
-        return NSColor.blackColor();
+        NSUserDefaults.standardUserDefaults().setInteger(seconds, forKey: key)
     }
 }

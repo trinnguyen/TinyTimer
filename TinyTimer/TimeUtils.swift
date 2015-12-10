@@ -9,8 +9,51 @@
 import Cocoa
 
 class TimeUtils: NSObject {
-    static func convertTicksToTime(ticks: Int) -> String
-    {
+    static func convertTicksToMenu(ticks: Int) -> String  {
+        var result = ""
+        if ticks > 0    {
+            let hours = ticks / 3600
+            let minTicks = ticks - hours * 3600
+            let minutes = minTicks / 60
+            let seconds = minTicks - minutes * 60
+            if hours > 0    {
+                var fmt = ""
+                if hours > 1    {
+                    fmt = "%d hours "
+                }   else    {
+                    fmt = "%d hour "
+                }
+                result = String(format: fmt, hours)
+            }
+            if minutes > 0  {
+                var fmt = ""
+                if minutes > 1  {
+                    fmt = "%@%d minutes "
+                }   else    {
+                    fmt = "%@%d minute "
+                }
+                result = String(format: fmt, result, minutes)
+            }
+            if seconds > 0  {
+                var fmt = ""
+                if seconds > 1  {
+                    fmt = "%@%d seconds"
+                }   else    {
+                    fmt = "%@%d second"
+                }
+                result = String(format: fmt, result, seconds)
+            }
+            if result.characters.count > 0  {
+                if result.characters.last! == " "       {
+                    result = String(result.characters.dropLast())
+                }
+            }
+        }   else    {
+            result = "0 second"
+        }
+        return result;
+    }
+    static func convertTicksToTime(ticks: Int) -> String    {
         let hours = ticks / 3600
         let minTicks = ticks - hours * 3600
         let minutes = minTicks / 60

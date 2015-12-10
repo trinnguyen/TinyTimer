@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="InputViewController" customModule="TinyTimer" customModuleProvider="target">
+            <connections>
+                <outlet property="btnStart" destination="frO-dz-fva" id="gxO-lb-0zq"/>
+                <outlet property="datePicker" destination="2RS-li-JTF" id="qmI-DA-Rwj"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="frO-dz-fva">
+                    <rect key="frame" x="249" y="8" width="92" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="CKF-ae-fnv"/>
+                        <constraint firstAttribute="width" constant="80" id="x1p-g9-llc"/>
+                    </constraints>
+                    <animations/>
+                    <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nLP-IA-zyj">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="handleStartTouched:" target="-2" id="zgb-oR-0aY"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TJO-Fn-Lgz">
+                    <rect key="frame" x="154" y="8" width="92" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="gfB-Jz-gCB"/>
+                    </constraints>
+                    <animations/>
+                    <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qBB-0z-fWp">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                        <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                    </buttonCell>
+                    <connections>
+                        <action selector="handleCancelTouched:" target="-2" id="9nv-tr-PzV"/>
+                    </connections>
+                </button>
+                <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2RS-li-JTF">
+                    <rect key="frame" x="106" y="68" width="141" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="8h8-HF-leI"/>
+                        <constraint firstAttribute="width" constant="138" id="Q0x-GM-rw7"/>
+                    </constraints>
+                    <animations/>
+                    <datePickerCell key="cell" alignment="left" drawsBackground="NO" id="QZ0-bK-rn1">
+                        <font key="font" size="30" name="Helvetica-Light"/>
+                        <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
+                            <!--1982-02-12 08:00:00 -0800-->
+                            <timeZone key="timeZone" name="US/Pacific"/>
+                        </calendarDate>
+                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <datePickerElements key="datePickerElements" hour="YES" minute="YES" second="YES"/>
+                    </datePickerCell>
+                    <connections>
+                        <action selector="handleDatePickerAction:" target="-2" id="M2E-GG-rFQ"/>
+                    </connections>
+                </datePicker>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="frO-dz-fva" secondAttribute="trailing" constant="15" id="EQQ-He-aut"/>
+                <constraint firstItem="frO-dz-fva" firstAttribute="leading" secondItem="TJO-Fn-Lgz" secondAttribute="trailing" constant="15" id="LTN-hP-dsM"/>
+                <constraint firstItem="2RS-li-JTF" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="106" id="cqf-Zt-gJb"/>
+                <constraint firstItem="2RS-li-JTF" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="34" id="dYG-Gb-FQ9"/>
+                <constraint firstAttribute="bottom" secondItem="frO-dz-fva" secondAttribute="bottom" constant="15" id="ms2-bI-66o"/>
+                <constraint firstAttribute="trailing" secondItem="2RS-li-JTF" secondAttribute="trailing" constant="106" id="yfl-ke-RLb"/>
+                <constraint firstAttribute="bottom" secondItem="TJO-Fn-Lgz" secondAttribute="bottom" constant="15" id="yoc-5S-RO5"/>
+            </constraints>
+            <animations/>
+            <point key="canvasLocation" x="311" y="234"/>
+        </customView>
+    </objects>
+</document>

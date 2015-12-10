@@ -18,13 +18,6 @@ class TimerRunner: NSObject {
     
     var isPausing : Bool
     
-//    override init() {
-//        self.actionUpdateProgress = Void
-//        self.actionFinished = Void
-//        seconds = 0
-//        super.init()
-//    }
-    
     init (actionUpdateProgress : (progress : String, precent : Float, force : Bool) -> Void, actionFinished : () -> Void, seconds : Int) {
         self.actionUpdateProgress = actionUpdateProgress
         self.actionFinished = actionFinished
@@ -40,19 +33,25 @@ class TimerRunner: NSObject {
     }
     func start(seconds : Int)
     {
-        //stop if needed
-        if (self.timer != nil) {
-            self.timer?.invalidate()
-            self.timer = nil
-        }
-        
         //start working
         self.cachedSeconds = seconds;
         self.seconds = seconds;
-        self.timer = NSTimer.init(timeInterval: 1, target: self, selector: Selector("doTick:"), userInfo: nil, repeats: true)
-        NSRunLoop.mainRunLoop().addTimer(self.timer!, forMode: NSRunLoopCommonModes)
-        self.isPausing = false
-        self.updateUI(true)
+     
+        if (self.seconds > 0)   {
+            //stop if needed
+            if (self.timer != nil) {
+                self.timer?.invalidate()
+                self.timer = nil
+            }
+            
+
+            self.timer = NSTimer.init(timeInterval: 1, target: self, selector: Selector("doTick:"), userInfo: nil, repeats: true)
+            NSRunLoop.mainRunLoop().addTimer(self.timer!, forMode: NSRunLoopCommonModes)
+            self.isPausing = false
+            self.updateUI(true)
+        }   else    {
+            self.stop()
+        }
     }
     func stop()
     {
