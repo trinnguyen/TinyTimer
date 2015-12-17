@@ -7,8 +7,8 @@
 //
 
 import Cocoa
-import Fabric
-import Crashlytics
+//import Fabric
+//import Crashlytics
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -17,7 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         //track crash
-        Fabric.with([Crashlytics.self])
+//        Fabric.with([Crashlytics.self])
 
         //default controller
         let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
