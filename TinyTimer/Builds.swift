@@ -9,7 +9,7 @@
 import Cocoa
 
 class Builds: NSObject {
-    static var normalColor = NSColor.blackColor()
+    static var normalColor = NSColor.black
     static var highlightColor = NSColor.init(calibratedRed: 15.0/255.0, green: 175.0/255.0, blue: 104.0/255.0, alpha: 1)
     static var defaultTimers = 60 * 30 //in seconds
 }

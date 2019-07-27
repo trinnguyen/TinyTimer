@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2BC1656E1BD26A0800A1556C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1656D1BD26A0800A1556C /* MainMenu.xib */; settings = {ASSET_TAGS = (); }; };
-		2BC165A51BD27D5600A1556C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC165A41BD27D5600A1556C /* Settings.swift */; settings = {ASSET_TAGS = (); }; };
-		2BE267251C182EAE006C338B /* Builds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE267241C182EAE006C338B /* Builds.swift */; settings = {ASSET_TAGS = (); }; };
-		2BE2672C1C1842C1006C338B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2672B1C1842C1006C338B /* Credits.rtf */; settings = {ASSET_TAGS = (); }; };
-		2BE2672F1C184C29006C338B /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE2672D1C184C29006C338B /* InputViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		2BE267301C184C29006C338B /* InputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2672E1C184C29006C338B /* InputViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		2BE2673B1C188F0C006C338B /* icon_64@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2673A1C188F0C006C338B /* icon_64@2x.png */; settings = {ASSET_TAGS = (); }; };
+		2BC1656E1BD26A0800A1556C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1656D1BD26A0800A1556C /* MainMenu.xib */; };
+		2BC165A51BD27D5600A1556C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC165A41BD27D5600A1556C /* Settings.swift */; };
+		2BE267251C182EAE006C338B /* Builds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE267241C182EAE006C338B /* Builds.swift */; };
+		2BE2672C1C1842C1006C338B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2672B1C1842C1006C338B /* Credits.rtf */; };
+		2BE2672F1C184C29006C338B /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE2672D1C184C29006C338B /* InputViewController.swift */; };
+		2BE267301C184C29006C338B /* InputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2672E1C184C29006C338B /* InputViewController.xib */; };
+		2BE2673B1C188F0C006C338B /* icon_64@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2673A1C188F0C006C338B /* icon_64@2x.png */; };
 		CE3E72CC1BD1F0DA00239048 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72CB1BD1F0DA00239048 /* AppDelegate.swift */; };
 		CE3E72CE1BD1F0DA00239048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3E72CD1BD1F0DA00239048 /* Assets.xcassets */; };
 		CE3E72DC1BD1F0DA00239048 /* TinyTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72DB1BD1F0DA00239048 /* TinyTimerTests.swift */; };
-		CE3E72E81BD1F0FB00239048 /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72E71BD1F0FB00239048 /* TimeUtils.swift */; settings = {ASSET_TAGS = (); }; };
-		CE3E72EC1BD1F1B000239048 /* TimerRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72EB1BD1F1B000239048 /* TimerRunner.swift */; settings = {ASSET_TAGS = (); }; };
-		CE3E72EE1BD1F1BB00239048 /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72ED1BD1F1BB00239048 /* TimerController.swift */; settings = {ASSET_TAGS = (); }; };
+		CE3E72E81BD1F0FB00239048 /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72E71BD1F0FB00239048 /* TimeUtils.swift */; };
+		CE3E72EC1BD1F1B000239048 /* TimerRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72EB1BD1F1B000239048 /* TimerRunner.swift */; };
+		CE3E72EE1BD1F1BB00239048 /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72ED1BD1F1BB00239048 /* TimerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,12 +179,13 @@
 		CE3E72C01BD1F0D900239048 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Tri Nguyen";
 				TargetAttributes = {
 					CE3E72C71BD1F0D900239048 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = TJ7NJK267F;
+						LastSwiftMigration = 1020;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -193,13 +194,14 @@
 					};
 					CE3E72D61BD1F0DA00239048 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 1020;
 						TestTargetID = CE3E72C71BD1F0D900239048;
 					};
 				};
 			};
 			buildConfigurationList = CE3E72C31BD1F0D900239048 /* Build configuration list for PBXProject "TinyTimer" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -276,17 +278,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -308,7 +321,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -320,17 +333,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -346,9 +370,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
 		};
@@ -357,16 +382,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TinyTimer/TinyTimer.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = TinyTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.trinnguyen.tinytimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -375,16 +405,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TinyTimer/TinyTimer.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = TinyTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.trinnguyen.tinytimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -397,6 +432,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.trinnguyen.TinyTimerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TinyTimer.app/Contents/MacOS/TinyTimer";
 			};
 			name = Debug;
@@ -410,6 +446,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.trinnguyen.TinyTimerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TinyTimer.app/Contents/MacOS/TinyTimer";
 			};
 			name = Release;

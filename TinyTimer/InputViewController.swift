@@ -10,7 +10,7 @@ import Cocoa
 
 class InputViewController: NSViewController {
     var actionClose: (() -> Void)!
-    var actionStart: ((seconds: Int) -> Void)!
+    var actionStart: ((_ seconds: Int) -> Void)!
 
     @IBOutlet weak var datePicker: NSDatePicker!
 
@@ -18,13 +18,13 @@ class InputViewController: NSViewController {
     var selectedSeconds : Int!
     
     //functions
-    
-    override init?(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    }
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
+//    override init(nibName nibNameOrNil: NSNib.Name?, bundle nibBundleOrNil: Bundle?) {
+//        super.init(nibName: nibNameOrNil.map { NSNib.Name(rawValue: $0) }, bundle: nibBundleOrNil)
+//    }
+//    
+//    required init?(coder: NSCoder) {
+//        super.init(coder: coder)
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,18 +33,18 @@ class InputViewController: NSViewController {
         
         //set to GB
         let locale = NSLocale(localeIdentifier: "en_GB")
-        self.datePicker.locale = locale
+        self.datePicker.locale = locale as Locale
     }
     override func viewWillAppear() {
         //update data here
         super.viewWillAppear()
         //create time (hours, minutes, seconds) of today
-        let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components([.Hour, .Minute, .Second], fromDate: NSDate())
+        let calendar = NSCalendar.current
+        var components = calendar.dateComponents([.hour, .minute, .second], from: NSDate() as Date)
         components.hour = 0
         components.minute = 0
         components.second = self.selectedSeconds
-        self.datePicker.dateValue = calendar.dateFromComponents(components)!
+        self.datePicker.dateValue = calendar.date(from: components)!
     }
     override func viewDidAppear() {
         self.datePicker.becomeFirstResponder()
@@ -65,15 +65,15 @@ class InputViewController: NSViewController {
     func doFinish() {
         //start timer
         self.datePicker.resignFirstResponder()
-        let components = NSCalendar.currentCalendar().components([.Hour, .Minute, .Second], fromDate: self.datePicker.dateValue)
+        let components = NSCalendar.current.dateComponents([.hour, .minute, .second], from: self.datePicker.dateValue)
         let hours = components.hour
         let minutes = components.minute
         let seconds = components.second
-        let totalSeconds = hours * 3600 + minutes * 60 + seconds
+        let totalSeconds = hours! * 3600 + minutes! * 60 + seconds!
         print(self.datePicker.dateValue)
         print(totalSeconds)
         if (self.actionStart != nil)    {
-            self.actionStart(seconds: totalSeconds)
+            self.actionStart(totalSeconds)
         }
     }
 }

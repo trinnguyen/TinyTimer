@@ -35,15 +35,15 @@ class TimerController: NSObject {
         customSeconds = self.settings.getCustomItem()
 
         //menu
-        startItem = NSMenuItem(title: "Start", action: Selector("doStart:"), keyEquivalent: "")
-        pauseResumeItem = NSMenuItem(title: "Pause", action: Selector("doPause:"), keyEquivalent: "")
-        stopItem = NSMenuItem(title: "Stop", action: Selector("doStop:"), keyEquivalent: "")
-        customItem = NSMenuItem(title: "Custom...", action: Selector("doCustom:"), keyEquivalent: "")
-        cachedCustomItem = NSMenuItem(title: "", action: Selector("doCustom0:"), keyEquivalent: "")
+        startItem = NSMenuItem(title: "Start", action: Selector(("doStart:")), keyEquivalent: "")
+        pauseResumeItem = NSMenuItem(title: "Pause", action: Selector(("doPause:")), keyEquivalent: "")
+        stopItem = NSMenuItem(title: "Stop", action: Selector(("doStop:")), keyEquivalent: "")
+        customItem = NSMenuItem(title: "Custom...", action: Selector(("doCustom:")), keyEquivalent: "")
+        cachedCustomItem = NSMenuItem(title: "", action: Selector(("doCustom0:")), keyEquivalent: "")
         
         //popOver
         popOver = NSPopover()
-        popOver.behavior = NSPopoverBehavior.Transient
+        popOver.behavior = NSPopover.Behavior.transient
         
         super.init()
         //init menu
@@ -60,58 +60,58 @@ class TimerController: NSObject {
     }
     func initMenuItems()
     {
-        self.cachedCustomItem.title = self.toMenuString(self.customSeconds)
+        self.cachedCustomItem.title = self.toMenuString(seconds: self.customSeconds)
         //Suggested Time Items
-        let t1Item = NSMenuItem(title: "1 hour", action: Selector("doCustom1:"), keyEquivalent: "")
-        let t2Item = NSMenuItem(title: "2 hours", action: Selector("doCustom2:"), keyEquivalent: "")
-        let t3Item = NSMenuItem(title: "4 hours", action: Selector("doCustom3:"), keyEquivalent: "")
+        let t1Item = NSMenuItem(title: "1 hour", action: Selector(("doCustom1:")), keyEquivalent: "")
+        let t2Item = NSMenuItem(title: "2 hours", action: Selector(("doCustom2:")), keyEquivalent: "")
+        let t3Item = NSMenuItem(title: "4 hours", action: Selector(("doCustom3:")), keyEquivalent: "")
         
         //Preferences Items
-        let aboutItem = NSMenuItem(title: "About", action: Selector("doAbout:"), keyEquivalent: "")
+        let aboutItem = NSMenuItem(title: "About", action: Selector(("doAbout:")), keyEquivalent: "")
         
         //Quit Items
-        let quitItem = NSMenuItem(title: "Quit TinyTimer", action: Selector("doQuit:"), keyEquivalent: "")
+        let quitItem = NSMenuItem(title: "Quit TinyTimer", action: Selector(("doQuit:")), keyEquivalent: "")
         
         let menu = NSMenu()
         menu.autoenablesItems = false
         menu.addItem(startItem)
         menu.addItem(pauseResumeItem)
         menu.addItem(stopItem)
-        menu.addItem(NSMenuItem.separatorItem())
+        menu.addItem(NSMenuItem.separator())
         menu.addItem(cachedCustomItem)
         menu.addItem(t1Item)
         menu.addItem(t2Item)
         menu.addItem(t3Item)
         menu.addItem(customItem)
-        menu.addItem(NSMenuItem.separatorItem())
+        menu.addItem(NSMenuItem.separator())
         menu.addItem(aboutItem)
         menu.addItem(quitItem)
         statusItem.menu = menu
         
-        for item in menu.itemArray {
+        for item in menu.items {
             item.target = self
         }
     }
     
     //Menu action
     func doQuit(sender: AnyObject?) {
-        NSApplication.sharedApplication().terminate(self)
+        NSApplication.shared.terminate(self)
     }
     func doCustom0(sender: AnyObject?)
     {
-        doStartTimer(self.customSeconds)
+        doStartTimer(seconds: self.customSeconds)
     }
     func doCustom1(sender: AnyObject?)
     {
-        doStartTimer(60 * 60)
+        doStartTimer(seconds: 60 * 60)
     }
     func doCustom2(sender: AnyObject?)
     {
-        doStartTimer(2 * 60 * 60)
+        doStartTimer(seconds: 2 * 60 * 60)
     }
     func doCustom3(sender: AnyObject?)
     {
-        doStartTimer(4 * 60 * 60)
+        doStartTimer(seconds: 4 * 60 * 60)
     }
     func doCustom(sender: AnyObject?)
     {
@@ -123,18 +123,18 @@ class TimerController: NSObject {
         }
         if let button = statusItem.button {
             self.inputViewController!.selectedSeconds = self.selectedSeconds
-            self.popOver.showRelativeToRect(button.bounds, ofView: button, preferredEdge: NSRectEdge.MinY)
+            self.popOver.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
         }
     }
     func doAbout(sender: AnyObject?)
     {
-        NSApplication.sharedApplication().orderFrontStandardAboutPanel(NSApplication.sharedApplication())
-        NSApplication.sharedApplication().activateIgnoringOtherApps(true)
+        NSApplication.shared.orderFrontStandardAboutPanel(NSApplication.shared)
+        NSApplication.shared.activate(ignoringOtherApps: true)
     }
     
     func doStart(sender: AnyObject?)
     {
-        doStartTimer(self.selectedSeconds)
+        doStartTimer(seconds: self.selectedSeconds)
     }
     func doPause(sender: AnyObject?)
     {
@@ -158,9 +158,9 @@ class TimerController: NSObject {
                 color = Builds.highlightColor
             }
             self.lastPercent = percent
-            self.statusItem.button?.image = TimeUtils.createImage(percent, highlightColor: color)
-            self.statusItem.button?.imagePosition = NSCellImagePosition.ImageLeft;
-            self.statusItem.button?.bordered = false
+            self.statusItem.button?.image = TimeUtils.createImage(percent: percent, highlightColor: color)
+            self.statusItem.button?.imagePosition = NSControl.ImagePosition.imageLeft;
+            self.statusItem.button?.isBordered = false
         }
 
         self.statusItem.button?.title = progress;
@@ -170,21 +170,23 @@ class TimerController: NSObject {
         //update menu
         self.updateMenu()
         
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.5 * Double(NSEC_PER_SEC)))
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+//        let delayTime = dispatch_time(dispatch_time_t(DispatchTime.now()), Int64(0.5 * Double(NSEC_PER_SEC)))
+        let deadlineTime = DispatchTime.now() + .milliseconds(500)
+        DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+//        dispatch_after(delayTime, dispatch_get_main_queue()) {
             let noti = NSUserNotification()
             noti.title = "Please stop! Time is up."
             noti.informativeText = "It's time for a coffee break"
             noti.soundName = NSUserNotificationDefaultSoundName
-            NSUserNotificationCenter.defaultUserNotificationCenter().deliverNotification(noti)
+            NSUserNotificationCenter.default.deliver(noti)
         }
     }
     
     //Custom Popover
     func doCustomStart(seconds : Int)   {
-        doStartTimer(seconds)
+        doStartTimer(seconds: seconds)
         doCustomClose()
-        self.updateCustomValue(seconds)
+        self.updateCustomValue(seconds: seconds)
     }
     func doCustomClose()    {
         self.popOver.close()
@@ -192,28 +194,28 @@ class TimerController: NSObject {
     func updateCustomValue(seconds : Int)  {
         //reload
         self.customSeconds = seconds
-        self.cachedCustomItem.title = self.toMenuString(self.customSeconds)
+        self.cachedCustomItem.title = self.toMenuString(seconds: self.customSeconds)
         //save
-        self.settings.setLatestCustom(self.customSeconds)
+        self.settings.setLatestCustom(seconds: self.customSeconds)
     }
     
     //intenal actions
     func updateMenu()   {
         let status = self.timerRunner?.getStatus();
         
-        startItem.enabled = status == TimerStatus.Stopped
-        pauseResumeItem.enabled = (status == TimerStatus.Running || status == TimerStatus.Paused)
+        startItem.isEnabled = status == TimerStatus.Stopped
+        pauseResumeItem.isEnabled = (status == TimerStatus.Running || status == TimerStatus.Paused)
         pauseResumeItem.title = (status == TimerStatus.Paused) ? "Resume" : "Pause"
-        stopItem.enabled = status != TimerStatus.Stopped;
+        stopItem.isEnabled = status != TimerStatus.Stopped;
     }
     func doStartTimer(seconds : Int)    {
         self.selectedSeconds = seconds
         self.lastPercent = 1;
-        self.settings.setLatestItem(self.selectedSeconds)
-        self.timerRunner!.start(self.selectedSeconds)
+        self.settings.setLatestItem(seconds: self.selectedSeconds)
+        self.timerRunner!.start(seconds: self.selectedSeconds)
         updateMenu()
     }
     func toMenuString(seconds: Int) -> String   {
-        return TimeUtils.convertTicksToMenu(seconds)
+        return TimeUtils.convertTicksToMenu(ticks: seconds)
     }
 }

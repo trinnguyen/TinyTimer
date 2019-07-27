@@ -20,7 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        Fabric.with([Crashlytics.self])
 
         //default controller
-        let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
+        let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         timerController = TimerController(statusItem: statusItem)
     }
 

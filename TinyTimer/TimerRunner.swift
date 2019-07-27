@@ -9,16 +9,16 @@
 import Cocoa
 
 class TimerRunner: NSObject {
-    var actionUpdateProgress: (progress: String, precent : Float, force : Bool) -> Void
+    var actionUpdateProgress: (_ progress: String, _ precent : Float, _ force : Bool) -> Void
     var actionFinished: () -> Void
     var seconds : Int
     var cachedSeconds : Int
     var status : TimerStatus
-    var timer : NSTimer?
+    var timer : Timer?
     
     var isPausing : Bool
     
-    init (actionUpdateProgress : (progress : String, precent : Float, force : Bool) -> Void, actionFinished : () -> Void, seconds : Int) {
+    init (actionUpdateProgress : @escaping (_ progress : String, _ precent : Float, _ force : Bool) -> Void, actionFinished : @escaping () -> Void, seconds : Int) {
         self.actionUpdateProgress = actionUpdateProgress
         self.actionFinished = actionFinished
         self.seconds = seconds
@@ -45,10 +45,10 @@ class TimerRunner: NSObject {
             }
             
 
-            self.timer = NSTimer.init(timeInterval: 1, target: self, selector: Selector("doTick:"), userInfo: nil, repeats: true)
-            NSRunLoop.mainRunLoop().addTimer(self.timer!, forMode: NSRunLoopCommonModes)
+            self.timer = Timer.init(timeInterval: 1, target: self, selector: Selector(("doTick:")), userInfo: nil, repeats: true)
+            RunLoop.main.add(self.timer!, forMode: RunLoop.Mode.common)
             self.isPausing = false
-            self.updateUI(true)
+            self.updateUI(force: true)
         }   else    {
             self.stop()
         }
@@ -68,13 +68,13 @@ class TimerRunner: NSObject {
     }
     func updateUI()
     {
-        self.updateUI(false)
+        self.updateUI(force: false)
     }
     func updateUI(force : Bool)
     {
-        let val = TimeUtils.convertTicksToTime(self.seconds);
+        let val = TimeUtils.convertTicksToTime(ticks: self.seconds);
         let percent = Float(self.seconds) / Float(self.cachedSeconds)
-        self.actionUpdateProgress(progress: val, precent:percent, force : force)
+        self.actionUpdateProgress(val, percent, force)
     }
     func doTick(sender : AnyObject?)
     {

@@ -43,9 +43,9 @@ class TimeUtils: NSObject {
                 }
                 result = String(format: fmt, result, seconds)
             }
-            if result.characters.count > 0  {
-                if result.characters.last! == " "       {
-                    result = String(result.characters.dropLast())
+            if result.count > 0  {
+                if result.last! == " "       {
+                    result = String(result.dropLast())
                 }
             }
         }   else    {
@@ -79,26 +79,26 @@ class TimeUtils: NSObject {
             samplesPerPixel: 4,
             hasAlpha: true,
             isPlanar: false,
-            colorSpaceName: NSDeviceRGBColorSpace,
+            colorSpaceName: NSColorSpaceName.deviceRGB,
             bytesPerRow: 0, bitsPerPixel: 0)!
         
         let g = NSGraphicsContext(bitmapImageRep: offScreenRep)
         NSGraphicsContext.saveGraphicsState()
 
         //context
-        NSGraphicsContext.setCurrentContext(g)
-        let context = g?.CGContext
+        NSGraphicsContext.current = g
+        let context = g!.cgContext
         let pad = CGFloat(1)
-        CGContextSetLineWidth(context, pad)
+        context.setLineWidth(pad)
         let drawRect = CGRect (x: pad, y: pad, width: s - pad * 2, height: s - pad * 2)
         
-        NSColor.clearColor().setFill()
-        CGContextFillRect(context, drawRect)
+        NSColor.clear.setFill()
+        context.fill(drawRect)
         
         //draw circle border
         highlightColor.setFill()
         highlightColor.setStroke()
-        CGContextStrokeEllipseInRect(context, drawRect)
+        context.strokeEllipse(in: drawRect)
         
         let r = drawRect.size.width / 2
         let center = NSPoint (x: r + pad, y: r + pad)
@@ -107,14 +107,14 @@ class TimeUtils: NSObject {
         let path = NSBezierPath ()
         path.lineWidth = pad
         
-        path.moveToPoint(NSPoint(x: r + pad, y: r * 2 + pad))
-        path.lineToPoint(center)
+        path.move(to: NSPoint(x: r + pad, y: r * 2 + pad))
+        path.line(to: center)
 
         let start = CGFloat((percent) * 360) + CGFloat(90)
         let end = CGFloat(90)
 
-        path.appendBezierPathWithArcWithCenter(center, radius: CGFloat(r), startAngle: start, endAngle: end)
-        path.closePath()
+        path.appendArc(withCenter: center, radius: CGFloat(r), startAngle: start, endAngle: end)
+        path.close()
         
         path.fill ()
         path.stroke()

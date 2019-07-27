@@ -17,26 +17,26 @@ class Settings: NSObject {
 
     func getCustomItem() -> Int
     {
-        return get(self.keyCustom)
+        return get(key: self.keyCustom)
     }
     func setLatestCustom(seconds : Int)
     {
-        update(seconds, key: self.keyCustom)
+        update(seconds: seconds, key: self.keyCustom)
     }
     func getLatestItem() -> Int
     {
-        return get(self.keyLatest)
+        return get(key: self.keyLatest)
     }
     func setLatestItem(seconds : Int)
     {
-        update(seconds, key: self.keyLatest)
+        update(seconds: seconds, key: self.keyLatest)
     }
     
     // Internal functions
     
     func get(key : String) -> Int
     {
-        let seconds = NSUserDefaults.standardUserDefaults().integerForKey(key)
+        let seconds = UserDefaults.standard.integer(forKey: key)
         if (seconds <= 0)
         {
             return Builds.defaultTimers
@@ -45,6 +45,6 @@ class Settings: NSObject {
     }
     func update(seconds : Int, key : String)
     {
-        NSUserDefaults.standardUserDefaults().setInteger(seconds, forKey: key)
+        UserDefaults.standard.set(seconds, forKey: key)
     }
 }
