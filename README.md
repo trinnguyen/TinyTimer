@@ -1,4 +1,4 @@
-# tinytimer
+# TinyTimer
 A simple Timer for macOS, access quickly from MenuBar, get more focused on the task
 
 
