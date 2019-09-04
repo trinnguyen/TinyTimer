@@ -35,11 +35,11 @@ class TimerController: NSObject {
         customSeconds = self.settings.getCustomItem()
 
         //menu
-        startItem = NSMenuItem(title: "Start", action: Selector(("doStart:")), keyEquivalent: "")
-        pauseResumeItem = NSMenuItem(title: "Pause", action: Selector(("doPause:")), keyEquivalent: "")
-        stopItem = NSMenuItem(title: "Stop", action: Selector(("doStop:")), keyEquivalent: "")
-        customItem = NSMenuItem(title: "Custom...", action: Selector(("doCustom:")), keyEquivalent: "")
-        cachedCustomItem = NSMenuItem(title: "", action: Selector(("doCustom0:")), keyEquivalent: "")
+        startItem = NSMenuItem(title: "Start", action: #selector(doStart(sender:)), keyEquivalent: "")
+        pauseResumeItem = NSMenuItem(title: "Pause", action: #selector(doPause(sender:)), keyEquivalent: "")
+        stopItem = NSMenuItem(title: "Stop", action: #selector(doStop(sender:)), keyEquivalent: "")
+        customItem = NSMenuItem(title: "Custom...", action: #selector(doCustom(sender:)), keyEquivalent: "")
+        cachedCustomItem = NSMenuItem(title: "", action: #selector(doCustom0(sender:)), keyEquivalent: "")
         
         //popOver
         popOver = NSPopover()
@@ -62,15 +62,15 @@ class TimerController: NSObject {
     {
         self.cachedCustomItem.title = self.toMenuString(seconds: self.customSeconds)
         //Suggested Time Items
-        let t1Item = NSMenuItem(title: "1 hour", action: Selector(("doCustom1:")), keyEquivalent: "")
-        let t2Item = NSMenuItem(title: "2 hours", action: Selector(("doCustom2:")), keyEquivalent: "")
-        let t3Item = NSMenuItem(title: "4 hours", action: Selector(("doCustom3:")), keyEquivalent: "")
+        let t1Item = NSMenuItem(title: "1 hour", action: #selector(doCustom1(sender:)), keyEquivalent: "")
+        let t2Item = NSMenuItem(title: "2 hours", action: #selector(doCustom2(sender:)), keyEquivalent: "")
+        let t3Item = NSMenuItem(title: "4 hours", action: #selector(doCustom3(sender:)), keyEquivalent: "")
         
         //Preferences Items
-        let aboutItem = NSMenuItem(title: "About", action: Selector(("doAbout:")), keyEquivalent: "")
+        let aboutItem = NSMenuItem(title: "About", action: #selector(doAbout(sender:)), keyEquivalent: "")
         
         //Quit Items
-        let quitItem = NSMenuItem(title: "Quit TinyTimer", action: Selector(("doQuit:")), keyEquivalent: "")
+        let quitItem = NSMenuItem(title: "Quit TinyTimer", action: #selector(doQuit(sender:)), keyEquivalent: "")
         
         let menu = NSMenu()
         menu.autoenablesItems = false
@@ -94,26 +94,26 @@ class TimerController: NSObject {
     }
     
     //Menu action
-    func doQuit(sender: AnyObject?) {
+    @objc func doQuit(sender: AnyObject?) {
         NSApplication.shared.terminate(self)
     }
-    func doCustom0(sender: AnyObject?)
+    @objc func doCustom0(sender: AnyObject?)
     {
         doStartTimer(seconds: self.customSeconds)
     }
-    func doCustom1(sender: AnyObject?)
+    @objc func doCustom1(sender: AnyObject?)
     {
         doStartTimer(seconds: 60 * 60)
     }
-    func doCustom2(sender: AnyObject?)
+    @objc func doCustom2(sender: AnyObject?)
     {
         doStartTimer(seconds: 2 * 60 * 60)
     }
-    func doCustom3(sender: AnyObject?)
+    @objc func doCustom3(sender: AnyObject?)
     {
         doStartTimer(seconds: 4 * 60 * 60)
     }
-    func doCustom(sender: AnyObject?)
+    @objc func doCustom(sender: AnyObject?)
     {
         if (self.inputViewController == nil)    {
             self.inputViewController = InputViewController(nibName: "InputViewController", bundle: nil)
@@ -126,22 +126,22 @@ class TimerController: NSObject {
             self.popOver.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
         }
     }
-    func doAbout(sender: AnyObject?)
+    @objc func doAbout(sender: AnyObject?)
     {
         NSApplication.shared.orderFrontStandardAboutPanel(NSApplication.shared)
         NSApplication.shared.activate(ignoringOtherApps: true)
     }
     
-    func doStart(sender: AnyObject?)
+    @objc func doStart(sender: AnyObject?)
     {
         doStartTimer(seconds: self.selectedSeconds)
     }
-    func doPause(sender: AnyObject?)
+    @objc func doPause(sender: AnyObject?)
     {
         self.timerRunner?.togglePause()
         updateMenu()
     }
-    func doStop(sender: AnyObject?)
+    @objc func doStop(sender: AnyObject?)
     {
         self.timerRunner?.stop()
         updateMenu()

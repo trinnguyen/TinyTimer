@@ -2,29 +2,28 @@
 //  AppDelegate.swift
 //  TinyTimer
 //
-//  Created by User on 10/17/15.
-//  Copyright © 2015 Tri Nguyen. All rights reserved.
+//  Created by Tri Nguyen on 9/4/19.
+//  Copyright © 2019 Tri Nguyen. All rights reserved.
 //
 
 import Cocoa
-//import Fabric
-//import Crashlytics
+var timerController : TimerController!
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    var timerController : TimerController!
+    @IBOutlet weak var window: NSWindow!
 
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-        //track crash
-//        Fabric.with([Crashlytics.self])
 
-        //default controller
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
         let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         timerController = TimerController(statusItem: statusItem)
     }
 
-    func applicationWillTerminate(aNotification: NSNotification) {
+    func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
+
+
 }
+

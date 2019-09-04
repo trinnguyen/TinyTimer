@@ -3,65 +3,65 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2BC1656E1BD26A0800A1556C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1656D1BD26A0800A1556C /* MainMenu.xib */; };
-		2BC165A51BD27D5600A1556C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC165A41BD27D5600A1556C /* Settings.swift */; };
-		2BE267251C182EAE006C338B /* Builds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE267241C182EAE006C338B /* Builds.swift */; };
-		2BE2672C1C1842C1006C338B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2672B1C1842C1006C338B /* Credits.rtf */; };
-		2BE2672F1C184C29006C338B /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE2672D1C184C29006C338B /* InputViewController.swift */; };
-		2BE267301C184C29006C338B /* InputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2672E1C184C29006C338B /* InputViewController.xib */; };
-		2BE2673B1C188F0C006C338B /* icon_64@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2673A1C188F0C006C338B /* icon_64@2x.png */; };
-		CE3E72CC1BD1F0DA00239048 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72CB1BD1F0DA00239048 /* AppDelegate.swift */; };
-		CE3E72CE1BD1F0DA00239048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3E72CD1BD1F0DA00239048 /* Assets.xcassets */; };
-		CE3E72DC1BD1F0DA00239048 /* TinyTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72DB1BD1F0DA00239048 /* TinyTimerTests.swift */; };
-		CE3E72E81BD1F0FB00239048 /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72E71BD1F0FB00239048 /* TimeUtils.swift */; };
-		CE3E72EC1BD1F1B000239048 /* TimerRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72EB1BD1F1B000239048 /* TimerRunner.swift */; };
-		CE3E72EE1BD1F1BB00239048 /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E72ED1BD1F1BB00239048 /* TimerController.swift */; };
+		867A7E6A231FF15B00ABC0E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A7E69231FF15B00ABC0E6 /* AppDelegate.swift */; };
+		867A7E6C231FF15C00ABC0E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 867A7E6B231FF15C00ABC0E6 /* Assets.xcassets */; };
+		867A7E6F231FF15C00ABC0E6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 867A7E6D231FF15C00ABC0E6 /* MainMenu.xib */; };
+		867A7E88231FF1CB00ABC0E6 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A7E86231FF1CB00ABC0E6 /* InputViewController.swift */; };
+		867A7E89231FF1CB00ABC0E6 /* InputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 867A7E87231FF1CB00ABC0E6 /* InputViewController.xib */; };
+		867A7E8B231FF1E100ABC0E6 /* Builds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A7E8A231FF1E100ABC0E6 /* Builds.swift */; };
+		867A7E8F231FF1F100ABC0E6 /* TimerRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A7E8C231FF1F100ABC0E6 /* TimerRunner.swift */; };
+		867A7E90231FF1F100ABC0E6 /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A7E8D231FF1F100ABC0E6 /* TimeUtils.swift */; };
+		867A7E91231FF1F100ABC0E6 /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A7E8E231FF1F100ABC0E6 /* TimerController.swift */; };
+		867A7E93231FF1F700ABC0E6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A7E92231FF1F700ABC0E6 /* Settings.swift */; };
+		867A7E98231FF29900ABC0E6 /* TinyTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A7E97231FF29900ABC0E6 /* TinyTimerTests.swift */; };
+		867A7E9B231FF2E800ABC0E6 /* icon_64@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 867A7E9A231FF2E800ABC0E6 /* icon_64@2x.png */; };
+		867A7E9C231FF35E00ABC0E6 /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A7E8D231FF1F100ABC0E6 /* TimeUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CE3E72D81BD1F0DA00239048 /* PBXContainerItemProxy */ = {
+		867A7E77231FF15D00ABC0E6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CE3E72C01BD1F0D900239048 /* Project object */;
+			containerPortal = 867A7E5E231FF15B00ABC0E6 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CE3E72C71BD1F0D900239048;
+			remoteGlobalIDString = 867A7E65231FF15B00ABC0E6;
 			remoteInfo = TinyTimer;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2BAE2B2B1C02FA9B009A61D3 /* TinyTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TinyTimer.entitlements; sourceTree = "<group>"; };
-		2BC1656D1BD26A0800A1556C /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		2BC165A41BD27D5600A1556C /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		2BE267241C182EAE006C338B /* Builds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builds.swift; sourceTree = "<group>"; };
-		2BE2672B1C1842C1006C338B /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = Credits.rtf; path = ../Credits.rtf; sourceTree = "<group>"; };
-		2BE2672D1C184C29006C338B /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
-		2BE2672E1C184C29006C338B /* InputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputViewController.xib; sourceTree = "<group>"; };
-		2BE2673A1C188F0C006C338B /* icon_64@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_64@2x.png"; sourceTree = "<group>"; };
-		CE3E72C81BD1F0D900239048 /* TinyTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE3E72CB1BD1F0DA00239048 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE3E72CD1BD1F0DA00239048 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CE3E72D21BD1F0DA00239048 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE3E72D71BD1F0DA00239048 /* TinyTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE3E72DB1BD1F0DA00239048 /* TinyTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyTimerTests.swift; sourceTree = "<group>"; };
-		CE3E72DD1BD1F0DA00239048 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE3E72E71BD1F0FB00239048 /* TimeUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeUtils.swift; sourceTree = "<group>"; };
-		CE3E72EB1BD1F1B000239048 /* TimerRunner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerRunner.swift; sourceTree = "<group>"; };
-		CE3E72ED1BD1F1BB00239048 /* TimerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
+		867A7E66231FF15B00ABC0E6 /* TinyTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		867A7E69231FF15B00ABC0E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		867A7E6B231FF15C00ABC0E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		867A7E6E231FF15C00ABC0E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		867A7E70231FF15C00ABC0E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		867A7E71231FF15C00ABC0E6 /* TinyTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TinyTimer.entitlements; sourceTree = "<group>"; };
+		867A7E76231FF15D00ABC0E6 /* TinyTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		867A7E7C231FF15D00ABC0E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		867A7E86231FF1CB00ABC0E6 /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		867A7E87231FF1CB00ABC0E6 /* InputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputViewController.xib; sourceTree = "<group>"; };
+		867A7E8A231FF1E100ABC0E6 /* Builds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builds.swift; sourceTree = "<group>"; };
+		867A7E8C231FF1F100ABC0E6 /* TimerRunner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerRunner.swift; sourceTree = "<group>"; };
+		867A7E8D231FF1F100ABC0E6 /* TimeUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeUtils.swift; sourceTree = "<group>"; };
+		867A7E8E231FF1F100ABC0E6 /* TimerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
+		867A7E92231FF1F700ABC0E6 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		867A7E96231FF29900ABC0E6 /* TinyTimerTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TinyTimerTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		867A7E97231FF29900ABC0E6 /* TinyTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyTimerTests.swift; sourceTree = "<group>"; };
+		867A7E9A231FF2E800ABC0E6 /* icon_64@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_64@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CE3E72C51BD1F0D900239048 /* Frameworks */ = {
+		867A7E63231FF15B00ABC0E6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE3E72D41BD1F0DA00239048 /* Frameworks */ = {
+		867A7E73231FF15D00ABC0E6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -71,80 +71,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2BE267311C187CBC006C338B /* Input */ = {
+		867A7E5D231FF15B00ABC0E6 = {
 			isa = PBXGroup;
 			children = (
-				2BE2672D1C184C29006C338B /* InputViewController.swift */,
-				2BE2672E1C184C29006C338B /* InputViewController.xib */,
-			);
-			name = Input;
-			sourceTree = "<group>";
-		};
-		CE3E72BF1BD1F0D900239048 = {
-			isa = PBXGroup;
-			children = (
-				CE3E72CA1BD1F0D900239048 /* TinyTimer */,
-				CE3E72DA1BD1F0DA00239048 /* TinyTimerTests */,
-				CE3E72C91BD1F0D900239048 /* Products */,
+				867A7E68231FF15B00ABC0E6 /* TinyTimer */,
+				867A7E79231FF15D00ABC0E6 /* TinyTimerTests */,
+				867A7E67231FF15B00ABC0E6 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CE3E72C91BD1F0D900239048 /* Products */ = {
+		867A7E67231FF15B00ABC0E6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE3E72C81BD1F0D900239048 /* TinyTimer.app */,
-				CE3E72D71BD1F0DA00239048 /* TinyTimerTests.xctest */,
+				867A7E66231FF15B00ABC0E6 /* TinyTimer.app */,
+				867A7E76231FF15D00ABC0E6 /* TinyTimerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CE3E72CA1BD1F0D900239048 /* TinyTimer */ = {
+		867A7E68231FF15B00ABC0E6 /* TinyTimer */ = {
 			isa = PBXGroup;
 			children = (
-				2BE2673A1C188F0C006C338B /* icon_64@2x.png */,
-				2BE2672B1C1842C1006C338B /* Credits.rtf */,
-				2BAE2B2B1C02FA9B009A61D3 /* TinyTimer.entitlements */,
-				CE3E72E61BD1F0E500239048 /* Classes */,
-				CE3E72CB1BD1F0DA00239048 /* AppDelegate.swift */,
-				CE3E72CD1BD1F0DA00239048 /* Assets.xcassets */,
-				CE3E72D21BD1F0DA00239048 /* Info.plist */,
-				2BC1656D1BD26A0800A1556C /* MainMenu.xib */,
-				2BE267241C182EAE006C338B /* Builds.swift */,
+				867A7E9A231FF2E800ABC0E6 /* icon_64@2x.png */,
+				867A7E8A231FF1E100ABC0E6 /* Builds.swift */,
+				867A7E85231FF1AF00ABC0E6 /* Classes */,
+				867A7E69231FF15B00ABC0E6 /* AppDelegate.swift */,
+				867A7E6B231FF15C00ABC0E6 /* Assets.xcassets */,
+				867A7E6D231FF15C00ABC0E6 /* MainMenu.xib */,
+				867A7E70231FF15C00ABC0E6 /* Info.plist */,
+				867A7E71231FF15C00ABC0E6 /* TinyTimer.entitlements */,
 			);
 			path = TinyTimer;
 			sourceTree = "<group>";
 		};
-		CE3E72DA1BD1F0DA00239048 /* TinyTimerTests */ = {
+		867A7E79231FF15D00ABC0E6 /* TinyTimerTests */ = {
 			isa = PBXGroup;
 			children = (
-				CE3E72DB1BD1F0DA00239048 /* TinyTimerTests.swift */,
-				CE3E72DD1BD1F0DA00239048 /* Info.plist */,
+				867A7E7C231FF15D00ABC0E6 /* Info.plist */,
+				867A7E97231FF29900ABC0E6 /* TinyTimerTests.swift */,
+				867A7E96231FF29900ABC0E6 /* TinyTimerTests-Bridging-Header.h */,
 			);
 			path = TinyTimerTests;
 			sourceTree = "<group>";
 		};
-		CE3E72E61BD1F0E500239048 /* Classes */ = {
+		867A7E85231FF1AF00ABC0E6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				2BE267311C187CBC006C338B /* Input */,
-				CE3E72E71BD1F0FB00239048 /* TimeUtils.swift */,
-				CE3E72EB1BD1F1B000239048 /* TimerRunner.swift */,
-				CE3E72ED1BD1F1BB00239048 /* TimerController.swift */,
-				2BC165A41BD27D5600A1556C /* Settings.swift */,
+				867A7E92231FF1F700ABC0E6 /* Settings.swift */,
+				867A7E8E231FF1F100ABC0E6 /* TimerController.swift */,
+				867A7E8C231FF1F100ABC0E6 /* TimerRunner.swift */,
+				867A7E8D231FF1F100ABC0E6 /* TimeUtils.swift */,
+				867A7E86231FF1CB00ABC0E6 /* InputViewController.swift */,
+				867A7E87231FF1CB00ABC0E6 /* InputViewController.xib */,
 			);
-			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CE3E72C71BD1F0D900239048 /* TinyTimer */ = {
+		867A7E65231FF15B00ABC0E6 /* TinyTimer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE3E72E01BD1F0DA00239048 /* Build configuration list for PBXNativeTarget "TinyTimer" */;
+			buildConfigurationList = 867A7E7F231FF15D00ABC0E6 /* Build configuration list for PBXNativeTarget "TinyTimer" */;
 			buildPhases = (
-				CE3E72C41BD1F0D900239048 /* Sources */,
-				CE3E72C51BD1F0D900239048 /* Frameworks */,
-				CE3E72C61BD1F0D900239048 /* Resources */,
+				867A7E62231FF15B00ABC0E6 /* Sources */,
+				867A7E63231FF15B00ABC0E6 /* Frameworks */,
+				867A7E64231FF15B00ABC0E6 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -152,86 +144,79 @@
 			);
 			name = TinyTimer;
 			productName = TinyTimer;
-			productReference = CE3E72C81BD1F0D900239048 /* TinyTimer.app */;
+			productReference = 867A7E66231FF15B00ABC0E6 /* TinyTimer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CE3E72D61BD1F0DA00239048 /* TinyTimerTests */ = {
+		867A7E75231FF15D00ABC0E6 /* TinyTimerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE3E72E31BD1F0DA00239048 /* Build configuration list for PBXNativeTarget "TinyTimerTests" */;
+			buildConfigurationList = 867A7E82231FF15D00ABC0E6 /* Build configuration list for PBXNativeTarget "TinyTimerTests" */;
 			buildPhases = (
-				CE3E72D31BD1F0DA00239048 /* Sources */,
-				CE3E72D41BD1F0DA00239048 /* Frameworks */,
-				CE3E72D51BD1F0DA00239048 /* Resources */,
+				867A7E72231FF15D00ABC0E6 /* Sources */,
+				867A7E73231FF15D00ABC0E6 /* Frameworks */,
+				867A7E74231FF15D00ABC0E6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CE3E72D91BD1F0DA00239048 /* PBXTargetDependency */,
+				867A7E78231FF15D00ABC0E6 /* PBXTargetDependency */,
 			);
 			name = TinyTimerTests;
 			productName = TinyTimerTests;
-			productReference = CE3E72D71BD1F0DA00239048 /* TinyTimerTests.xctest */;
+			productReference = 867A7E76231FF15D00ABC0E6 /* TinyTimerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CE3E72C01BD1F0D900239048 /* Project object */ = {
+		867A7E5E231FF15B00ABC0E6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1020;
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Tri Nguyen";
 				TargetAttributes = {
-					CE3E72C71BD1F0D900239048 = {
-						CreatedOnToolsVersion = 7.0;
-						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
-						SystemCapabilities = {
-							com.apple.Sandbox = {
-								enabled = 1;
-							};
-						};
+					867A7E65231FF15B00ABC0E6 = {
+						CreatedOnToolsVersion = 10.3;
 					};
-					CE3E72D61BD1F0DA00239048 = {
-						CreatedOnToolsVersion = 7.0;
-						LastSwiftMigration = 1020;
-						TestTargetID = CE3E72C71BD1F0D900239048;
+					867A7E75231FF15D00ABC0E6 = {
+						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
+						TestTargetID = 867A7E65231FF15B00ABC0E6;
 					};
 				};
 			};
-			buildConfigurationList = CE3E72C31BD1F0D900239048 /* Build configuration list for PBXProject "TinyTimer" */;
-			compatibilityVersion = "Xcode 3.2";
+			buildConfigurationList = 867A7E61231FF15B00ABC0E6 /* Build configuration list for PBXProject "TinyTimer" */;
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = CE3E72BF1BD1F0D900239048;
-			productRefGroup = CE3E72C91BD1F0D900239048 /* Products */;
+			mainGroup = 867A7E5D231FF15B00ABC0E6;
+			productRefGroup = 867A7E67231FF15B00ABC0E6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE3E72C71BD1F0D900239048 /* TinyTimer */,
-				CE3E72D61BD1F0DA00239048 /* TinyTimerTests */,
+				867A7E65231FF15B00ABC0E6 /* TinyTimer */,
+				867A7E75231FF15D00ABC0E6 /* TinyTimerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CE3E72C61BD1F0D900239048 /* Resources */ = {
+		867A7E64231FF15B00ABC0E6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BE2673B1C188F0C006C338B /* icon_64@2x.png in Resources */,
-				CE3E72CE1BD1F0DA00239048 /* Assets.xcassets in Resources */,
-				2BE2672C1C1842C1006C338B /* Credits.rtf in Resources */,
-				2BC1656E1BD26A0800A1556C /* MainMenu.xib in Resources */,
-				2BE267301C184C29006C338B /* InputViewController.xib in Resources */,
+				867A7E89231FF1CB00ABC0E6 /* InputViewController.xib in Resources */,
+				867A7E9B231FF2E800ABC0E6 /* icon_64@2x.png in Resources */,
+				867A7E6C231FF15C00ABC0E6 /* Assets.xcassets in Resources */,
+				867A7E6F231FF15C00ABC0E6 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE3E72D51BD1F0DA00239048 /* Resources */ = {
+		867A7E74231FF15D00ABC0E6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -241,54 +226,69 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CE3E72C41BD1F0D900239048 /* Sources */ = {
+		867A7E62231FF15B00ABC0E6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE3E72E81BD1F0FB00239048 /* TimeUtils.swift in Sources */,
-				CE3E72EE1BD1F1BB00239048 /* TimerController.swift in Sources */,
-				2BE267251C182EAE006C338B /* Builds.swift in Sources */,
-				2BE2672F1C184C29006C338B /* InputViewController.swift in Sources */,
-				2BC165A51BD27D5600A1556C /* Settings.swift in Sources */,
-				CE3E72EC1BD1F1B000239048 /* TimerRunner.swift in Sources */,
-				CE3E72CC1BD1F0DA00239048 /* AppDelegate.swift in Sources */,
+				867A7E6A231FF15B00ABC0E6 /* AppDelegate.swift in Sources */,
+				867A7E90231FF1F100ABC0E6 /* TimeUtils.swift in Sources */,
+				867A7E88231FF1CB00ABC0E6 /* InputViewController.swift in Sources */,
+				867A7E8B231FF1E100ABC0E6 /* Builds.swift in Sources */,
+				867A7E93231FF1F700ABC0E6 /* Settings.swift in Sources */,
+				867A7E8F231FF1F100ABC0E6 /* TimerRunner.swift in Sources */,
+				867A7E91231FF1F100ABC0E6 /* TimerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE3E72D31BD1F0DA00239048 /* Sources */ = {
+		867A7E72231FF15D00ABC0E6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE3E72DC1BD1F0DA00239048 /* TinyTimerTests.swift in Sources */,
+				867A7E9C231FF35E00ABC0E6 /* TimeUtils.swift in Sources */,
+				867A7E98231FF29900ABC0E6 /* TinyTimerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CE3E72D91BD1F0DA00239048 /* PBXTargetDependency */ = {
+		867A7E78231FF15D00ABC0E6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CE3E72C71BD1F0D900239048 /* TinyTimer */;
-			targetProxy = CE3E72D81BD1F0DA00239048 /* PBXContainerItemProxy */;
+			target = 867A7E65231FF15B00ABC0E6 /* TinyTimer */;
+			targetProxy = 867A7E77231FF15D00ABC0E6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		867A7E6D231FF15C00ABC0E6 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				867A7E6E231FF15C00ABC0E6 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		CE3E72DE1BD1F0DA00239048 /* Debug */ = {
+		867A7E7D231FF15D00ABC0E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -300,6 +300,7 @@
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -307,7 +308,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -321,29 +322,34 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		CE3E72DF1BD1F0DA00239048 /* Release */ = {
+		867A7E7E231FF15D00ABC0E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -355,6 +361,7 @@
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -362,7 +369,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -370,82 +377,93 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
-		CE3E72E11BD1F0DA00239048 /* Debug */ = {
+		867A7E80231FF15D00ABC0E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TinyTimer/TinyTimer.entitlements;
-				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
 				INFOPLIST_FILE = TinyTimer/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.trinnguyen.tinytimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		CE3E72E21BD1F0DA00239048 /* Release */ = {
+		867A7E81231FF15D00ABC0E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TinyTimer/TinyTimer.entitlements;
-				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
 				INFOPLIST_FILE = TinyTimer/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.trinnguyen.tinytimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
-		CE3E72E41BD1F0DA00239048 /* Debug */ = {
+		867A7E83231FF15D00ABC0E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = TinyTimerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.trinnguyen.TinyTimerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TinyTimerTests/TinyTimerTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TinyTimer.app/Contents/MacOS/TinyTimer";
 			};
 			name = Debug;
 		};
-		CE3E72E51BD1F0DA00239048 /* Release */ = {
+		867A7E84231FF15D00ABC0E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = TinyTimerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.trinnguyen.TinyTimerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TinyTimerTests/TinyTimerTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TinyTimer.app/Contents/MacOS/TinyTimer";
 			};
@@ -454,34 +472,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE3E72C31BD1F0D900239048 /* Build configuration list for PBXProject "TinyTimer" */ = {
+		867A7E61231FF15B00ABC0E6 /* Build configuration list for PBXProject "TinyTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE3E72DE1BD1F0DA00239048 /* Debug */,
-				CE3E72DF1BD1F0DA00239048 /* Release */,
+				867A7E7D231FF15D00ABC0E6 /* Debug */,
+				867A7E7E231FF15D00ABC0E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE3E72E01BD1F0DA00239048 /* Build configuration list for PBXNativeTarget "TinyTimer" */ = {
+		867A7E7F231FF15D00ABC0E6 /* Build configuration list for PBXNativeTarget "TinyTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE3E72E11BD1F0DA00239048 /* Debug */,
-				CE3E72E21BD1F0DA00239048 /* Release */,
+				867A7E80231FF15D00ABC0E6 /* Debug */,
+				867A7E81231FF15D00ABC0E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE3E72E31BD1F0DA00239048 /* Build configuration list for PBXNativeTarget "TinyTimerTests" */ = {
+		867A7E82231FF15D00ABC0E6 /* Build configuration list for PBXNativeTarget "TinyTimerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE3E72E41BD1F0DA00239048 /* Debug */,
-				CE3E72E51BD1F0DA00239048 /* Release */,
+				867A7E83231FF15D00ABC0E6 /* Debug */,
+				867A7E84231FF15D00ABC0E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CE3E72C01BD1F0D900239048 /* Project object */;
+	rootObject = 867A7E5E231FF15B00ABC0E6 /* Project object */;
 }

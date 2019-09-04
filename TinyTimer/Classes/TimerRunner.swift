@@ -45,7 +45,7 @@ class TimerRunner: NSObject {
             }
             
 
-            self.timer = Timer.init(timeInterval: 1, target: self, selector: Selector(("doTick:")), userInfo: nil, repeats: true)
+            self.timer = Timer.init(timeInterval: 1, target: self, selector: #selector(doTick(sender:)), userInfo: nil, repeats: true)
             RunLoop.main.add(self.timer!, forMode: RunLoop.Mode.common)
             self.isPausing = false
             self.updateUI(force: true)
@@ -76,7 +76,7 @@ class TimerRunner: NSObject {
         let percent = Float(self.seconds) / Float(self.cachedSeconds)
         self.actionUpdateProgress(val, percent, force)
     }
-    func doTick(sender : AnyObject?)
+    @objc func doTick(sender : AnyObject?)
     {
         if (!self.isPausing) {
             self.seconds = self.seconds - 1;
