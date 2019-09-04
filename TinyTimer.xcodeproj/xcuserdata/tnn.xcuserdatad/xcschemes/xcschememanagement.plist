@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>TinyTimer.xcscheme</key>
+		<key>TinyTimer.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>CE3E72C71BD1F0D900239048</key>
+		<key>867A7E65231FF15B00ABC0E6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CE3E72D61BD1F0DA00239048</key>
+		<key>867A7E75231FF15D00ABC0E6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

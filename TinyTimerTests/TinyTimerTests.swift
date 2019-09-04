@@ -2,15 +2,15 @@
 //  TinyTimerTests.swift
 //  TinyTimerTests
 //
-//  Created by User on 10/17/15.
-//  Copyright © 2015 Tri Nguyen. All rights reserved.
+//  Created by Tri Nguyen on 9/4/19.
+//  Copyright © 2019 Tri Nguyen. All rights reserved.
 //
 
 import XCTest
 @testable import TinyTimer
 
 class TinyTimerTests: XCTestCase {
-    
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -48,6 +48,5 @@ class TinyTimerTests: XCTestCase {
         XCTAssertEqual("2 hours", TimeUtils.convertTicksToMenu(ticks: 2 * 60 * 60))
         XCTAssertEqual("4 hours", TimeUtils.convertTicksToMenu(ticks: 4 * 60 * 60))
     }
-    
-    
+
 }

@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="InputViewController" customModule="TinyTimer" customModuleProvider="target">
@@ -23,13 +25,12 @@
                         <constraint firstAttribute="height" constant="21" id="CKF-ae-fnv"/>
                         <constraint firstAttribute="width" constant="80" id="x1p-g9-llc"/>
                     </constraints>
-                    <animations/>
                     <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nLP-IA-zyj">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
-                        <action selector="handleStartTouched:" target="-2" id="zgb-oR-0aY"/>
+                        <action selector="handleStartTouchedWithSender:" target="-2" id="FIv-W3-eAQ"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TJO-Fn-Lgz">
@@ -37,7 +38,6 @@
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="gfB-Jz-gCB"/>
                     </constraints>
-                    <animations/>
                     <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qBB-0z-fWp">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -46,7 +46,7 @@ Gw
 </string>
                     </buttonCell>
                     <connections>
-                        <action selector="handleCancelTouched:" target="-2" id="9nv-tr-PzV"/>
+                        <action selector="handleCancelTouchedWithSender:" target="-2" id="abP-Vn-yOS"/>
                     </connections>
                 </button>
                 <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2RS-li-JTF">
@@ -55,19 +55,17 @@ Gw
                         <constraint firstAttribute="height" constant="38" id="8h8-HF-leI"/>
                         <constraint firstAttribute="width" constant="138" id="Q0x-GM-rw7"/>
                     </constraints>
-                    <animations/>
                     <datePickerCell key="cell" alignment="left" drawsBackground="NO" id="QZ0-bK-rn1">
                         <font key="font" size="30" name="Helvetica-Light"/>
-                        <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
-                            <!--1982-02-12 08:00:00 -0800-->
-                            <timeZone key="timeZone" name="US/Pacific"/>
-                        </calendarDate>
+                        <date key="date" timeIntervalSinceReferenceDate="-595929600">
+                            <!--1982-02-12 16:00:00 +0000-->
+                        </date>
                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <datePickerElements key="datePickerElements" hour="YES" minute="YES" second="YES"/>
                     </datePickerCell>
                     <connections>
-                        <action selector="handleDatePickerAction:" target="-2" id="M2E-GG-rFQ"/>
+                        <action selector="handleDatePickerActionWithSender:" target="-2" id="6uB-W0-MYW"/>
                     </connections>
                 </datePicker>
             </subviews>
@@ -80,7 +78,6 @@ Gw
                 <constraint firstAttribute="trailing" secondItem="2RS-li-JTF" secondAttribute="trailing" constant="106" id="yfl-ke-RLb"/>
                 <constraint firstAttribute="bottom" secondItem="TJO-Fn-Lgz" secondAttribute="bottom" constant="15" id="yoc-5S-RO5"/>
             </constraints>
-            <animations/>
             <point key="canvasLocation" x="311" y="234"/>
         </customView>
     </objects>
