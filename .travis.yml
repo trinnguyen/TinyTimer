@@ -4,4 +4,3 @@ language: swift
 script:
   - xcodebuild test -scheme TinyTimer
   - xcodebuild
-  - zip -r TinyTimer.zip build/Release/TinyTimer.app

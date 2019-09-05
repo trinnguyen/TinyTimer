@@ -1,4 +1,4 @@
-# TinyTimer
+# TinyTimer [![Build Status](https://travis-ci.com/trinnguyen/tinytimer.svg?branch=master)](https://travis-ci.com/trinnguyen/tinytimer)
 A simple Timer for macOS, access quickly from MenuBar, get more focused on the task
 
 
